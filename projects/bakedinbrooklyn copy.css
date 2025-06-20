@@ -1,0 +1,289 @@
+:root {
+    --text-color: #000000;
+    --white-color: #FBFBFB;
+    --background-color: #e5e7e8;
+    --lilac-color: #8091D0;
+    --lighter-text: #222635;
+    --yellow-color: #ffdd00;
+}
+
+* {
+    color:  var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a { /*  For links */
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--background-color);
+}
+
+/* ============================================================
+    Header Styles - Homepage
+=============================================================== */
+
+header {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: var(--white-color);
+}
+
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+#header-left-side img {
+    padding-left: 30px;
+    height: 75px;
+    width: auto;   
+    max-width: 100%; 
+    display: block;
+    flex-shrink: 0;
+}
+
+#header-left-side:hover {
+    padding-left: 30px;
+    content: url('../photos/logohover.png');
+    height: 75px;
+    width: auto;   
+    max-width: 100%; 
+    display: block;
+    flex-shrink: 0;
+}
+
+#header-left-side:active {
+    padding-left: 30px;
+    content: url('../photos/logoactive.png');
+    height: 75px;
+    width: auto;   
+    max-width: 100%; 
+    display: block;
+    flex-shrink: 0;
+}
+
+.header-nav a {
+    width: 15em;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--text-color);
+    padding: 5px 30px;
+    border: 2px solid transparent;        /* use 2px to match hover */
+    border-bottom: 5px solid transparent; /* same bottom thickness */
+}
+
+.header-nav a:hover {
+    width: 15em;
+    color: var(--text-color);
+    border-radius: 20px; 
+    background-color: var(--background-color);
+    border: solid 2px var(--text-color);
+    border-bottom: solid 5px var(--text-color);
+}
+
+.header-nav a:active {
+    width: 15em;
+    color: var(--text-color);
+    border-radius: 20px; 
+    /* background-color: #b9c2e6; */
+    border: solid 2px var(--text-color);
+    border-bottom: solid 5px var(--text-color);
+}
+
+
+#header-left-side:hover {
+  cursor: url('../photos/cursor.png'), pointer;
+}
+
+.burger {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    padding-left: 2rem;
+    margin-top: -15px;
+}
+
+
+/* Hide nav on small screens by default */
+@media (max-width: 768px) {
+    .header-right {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 2rem;
+        background-color: var(--white-color);
+        border: 2px solid var(--text-color);
+        border-radius: 20px;
+        flex-direction: column;
+        font-size: 0.85em;
+        gap: 10px;
+        padding: 10px 30px;
+        z-index: 1000;
+    }
+    .header-right.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+
+/* ============================================================
+    Main Styles - Homepage
+=============================================================== */
+
+main {
+    /* background-color: var(--background-color); */
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    min-height: calc(100vh - 100px); /* adjust 100px to match header height */
+}
+
+
+/* ============================================================
+    Footer Styles - Homepage
+=============================================================== */
+
+footer {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    width: 100vw;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+#footer-paragraph {
+    padding-top: 5px;
+    font-size: 0.8em;
+}
+
+#footer-image {
+    height: 25px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+#footer-image:hover {
+    height: 27px;
+    width: auto;
+    transform: rotate(8deg); /* or -5deg for opposite direction */
+}
+
+.bottom-email:hover{
+    color: var(--lilac-color);
+}
+
+.bottom-email:active{
+    font-size: 0.9em;
+    color: #6573a6;
+}
+
+
+/* ============================================================
+    Main Styles - About page
+=============================================================== */
+
+.project-title-part{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#actual-project-title {
+    font-size: 4em;
+    font-weight: 600;
+}
+
+#short-proj-desc {
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* ============================================================
+    Proj Overview
+=============================================================== */
+
+
+.project-overview {
+    background-color: var(--white-color);
+    padding: 50px;
+}
+#project-overview-title {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+#overview-first-paragraph {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.overview-top-text {
+    display: flex;
+}
+
+.overview-top-left-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 27px;
+    width: 500px;
+    margin-right: 50px;
+    font-weight: 300;
+}
+
+.overview-top-right-text {
+     margin-left: auto;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ============================================================
+    Proj Quick links
+=============================================================== */
+
+#quicklinks {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 2em;
+    font-weight: 500;
+    padding: 50px;
+    border-bottom: solid 4px black;
+}
+
+/* ============================================================
+    Empathize
+=============================================================== */
+#empathize h4 {
+    justify-self: center;
+    font-size: 2em;
+    padding: 50px;
+
+}
