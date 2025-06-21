@@ -266,7 +266,7 @@ footer {
 }
 
 #project-overview-title:hover{
-  background-size: 100% 100%; /* shows highlight on hover */
+  background-size: 100% 100%;
 }
 
 #overview-first-paragraph {
@@ -401,15 +401,15 @@ footer {
 }
 
 #conclusion-icon-div:hover {
-    border: solid 4px var(--background-color);
-    box-shadow: 0 0 5px var(--background-color),
-                0 0 10px var(--background-color);
+    border: solid 4px rgb(151, 151, 151);
+    box-shadow: 0 0 5px rgb(151, 151, 151),
+                0 0 10px rgb(151, 151, 151);
     transform: scale(1.05); 
-    color: var(--background-color);
+    color: rgb(151, 151, 151);
 }
 
 #conclusion-icon-div:hover p {
-    color: var(--background-color);
+    color: rgb(151, 151, 151);
 }
 
 .local-nav img.icon {
