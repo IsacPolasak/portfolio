@@ -180,9 +180,9 @@ main {
     Footer Styles - Homepage
 =============================================================== */
 
+
 footer {
     box-sizing: border-box;
-    /* font-family: 'Open Sans', sans-serif; */
     font-weight: 700;
     width: 100vw;
     padding: 10px 30px;
@@ -203,12 +203,28 @@ footer {
 }
 
 #footer-image:hover {
-    height: 27px;
-    width: auto;
-    transform: rotate(8deg); /* or -5deg for opposite direction */
+    transform: scale(1.08) rotate(8deg);
+}
+
+.bottom-email:hover, .resume-button:hover{
+    color: var(--blue-color);
+}
+
+.bottom-email:active, .resume-button:active{
+    font-size: 0.9em;
+    color: #6573a6;
+}
+
+.resume-button {
+    padding-right: 10px;
 }
 
 
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 /* ============================================================
     Main Styles - About page

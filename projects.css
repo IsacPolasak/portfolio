@@ -180,6 +180,7 @@ main {
     Footer Styles - Homepage
 =============================================================== */
 
+
 footer {
     box-sizing: border-box;
     font-weight: 700;
@@ -202,20 +203,28 @@ footer {
 }
 
 #footer-image:hover {
-    height: 27px;
-    width: auto;
-    transform: rotate(8deg); 
+    transform: scale(1.08) rotate(8deg);
 }
 
-.bottom-email:hover{
+.bottom-email:hover, .resume-button:hover{
     color: var(--blue-color);
 }
 
-.bottom-email:active{
+.bottom-email:active, .resume-button:active{
     font-size: 0.9em;
     color: #6573a6;
 }
 
+.resume-button {
+    padding-right: 10px;
+}
+
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
 
 /* ============================================================
     Main Styles - Projects page
