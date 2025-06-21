@@ -64,25 +64,25 @@ header {
     display: block;
 }
 
-#header-left-side:hover {
-    padding-left: 30px;
-    content: url('./photos/logohover.png');
+
+#header-left-side img {
     height: 75px;
-    width: auto;   
-    max-width: 100%; 
+    width: auto;
     display: block;
-    flex-shrink: 0;
+    transition: 0.2s ease;
+    cursor: url('./photos/cursor.png'), pointer;
 }
 
-#header-left-side:active {
-    padding-left: 30px;
-    content: url('./photos/logoactive.png');
-    height: 75px;
-    width: auto;   
-    max-width: 100%; 
-    display: block;
-    flex-shrink: 0;
+#header-left-side a:hover img {
+    content: unset;
+    src: url('./photos/logohover.png');
 }
+
+#header-left-side a:active img {
+    content: unset;
+    src: url('./photos/logoactive.png');
+}
+
 
 .header-nav a {
     width: 15em;
@@ -348,4 +348,39 @@ footer {
 .bottom-email:active{
     font-size: 0.9em;
     color: #6573a6;
+}
+
+
+@media (max-width: 768px) {
+    .about-middle {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #two-cat-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .image-hover-wrapper {
+        width: 100%;         /* match paragraph width */
+        max-width: 650px;    /* same as desktop about-middle width */
+    }
+
+    #nieta, #ahava {
+        width: 100%;
+        height: auto;
+    }
+    .marquee-content {
+        animation: scroll-marquee 20s linear infinite;
+        font-size: 0.9em;
+        padding-left: 1rem;
+    }
+
+    .marquee-content span {
+        white-space: nowrap;
+    }
 }

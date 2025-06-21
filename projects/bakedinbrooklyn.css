@@ -52,7 +52,6 @@ header {
     box-sizing: border-box;
 }
 
-
 .header-right {
     display: flex;
     justify-content: space-between;
@@ -62,32 +61,21 @@ header {
 }
 
 #header-left-side img {
-    padding-left: 30px;
     height: 75px;
-    width: auto;   
-    /* max-width: 100%;  */
+    width: auto;
     display: block;
-    flex-shrink: 0;
+    transition: 0.2s ease;
+    cursor: url('../photos/cursor.png'), pointer;
 }
 
-#header-left-side:hover {
-    padding-left: 30px;
-    content: url('../photos/logohover.png');
-    height: 75px;
-    width: auto;   
-    max-width: 100%; 
-    display: block;
-    flex-shrink: 0;
+#header-left-side a:hover img {
+    content: unset;
+    src: url('../photos/logohover.png');
 }
 
-#header-left-side:active {
-    padding-left: 30px;
-    content: url('../photos/logoactive.png');
-    height: 75px;
-    width: auto;   
-    max-width: 100%; 
-    display: block;
-    flex-shrink: 0;
+#header-left-side a:active img {
+    content: unset;
+    src: url('../photos/logoactive.png');
 }
 
 .header-nav a {
@@ -235,23 +223,32 @@ footer {
 #actual-project-title {
     font-size: 4em;
     font-weight: 800;
+    font-size: clamp(3.1rem, 6vw, 4rem);
 }
 
 #short-proj-desc {
     font-weight: 500;
     margin-bottom: 40px;
+    font-size: clamp(0.4rem, 2.5vw, 1rem);
 }
 
 /* ============================================================
     Proj Overview
 =============================================================== */
 
-
 .project-overview {
+    padding: 50px clamp(20px, 5vw, 80px) clamp(20px, 5vw, 80px);
+    margin: 0 auto;       
+    max-width: 90vw;  
     border: solid var(--background-color) 4px;
     border-radius: 20px;
-    padding: 50px 80px;
-    margin: auto 8vw;
+    max-width: calc(90vw - 230px);
+}
+
+@media (max-width: 700px) {
+    .project-overview {
+        max-width: calc(90vw - 50px);
+    }
 }
 
 #project-overview-title {
@@ -266,7 +263,7 @@ footer {
 }
 
 #project-overview-title:hover{
-  background-size: 100% 100%;
+    background-size: 100% 100%;
 }
 
 #overview-first-paragraph {
@@ -274,25 +271,30 @@ footer {
     margin-bottom: 20px;
 }
 
+
 .overview-top-text {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    align-items: flex-start;
 }
 
 .overview-top-left-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    line-height: 27px;
-    width: 500px;
-    margin-right: 50px;
-    font-weight: 400;
+  flex: 0 1 450px;
+  max-width: 450px;
+  min-width: 0; 
+  line-height: 1.5em;
 }
 
 .overview-top-right-text {
-    margin-left: auto;
-    width: 25%;
+    flex: 0 1 150px;
+    margin-left: auto; 
     display: flex;
     justify-content: space-between;
+    box-sizing: border-box;
+    justify-content: flex-start; 
+    gap: 15px;      
+    
 }
 
 .top-right-text-middle {
@@ -1058,3 +1060,4 @@ footer {
 #back-to-quicklinks:active {
     background-color: gray;
 }
+

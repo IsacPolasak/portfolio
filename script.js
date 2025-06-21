@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.getElementById("header-image");
+
+    if (logo) {
+        logo.addEventListener("mouseover", () => {
+            logo.src = "./photos/logohover.png";
+        });
+
+        logo.addEventListener("mousedown", () => {
+            logo.src = "./photos/logoactive.png";
+        });
+
+        logo.addEventListener("mouseup", () => {
+            logo.src = "./photos/headerlogo.png";
+        });
+
+        logo.addEventListener("mouseleave", () => {
+            logo.src = "./photos/headerlogo.png";
+        });
+    }
+});
+
+
 // Burger menu opens menu when clicked.
 document.addEventListener("DOMContentLoaded", function () {
     const burger = document.getElementById("burger");

@@ -59,30 +59,23 @@ header {
 }
 
 #header-left-side img {
-  height: 75px;
-  width: auto;
-  display: block;
+    height: 75px;
+    width: auto;
+    display: block;
+    transition: 0.2s ease;
+    cursor: url('./photos/cursor.png'), pointer;
 }
 
-#header-left-side:hover {
-    padding-left: 30px;
-    content: url('./photos/logohover.png');
-    height: 75px;
-    width: auto;   
-    max-width: 100%; 
-    display: block;
-    flex-shrink: 0;
+#header-left-side a:hover img {
+    content: unset;
+    src: url('./photos/logohover.png');
 }
 
-#header-left-side:active {
-    padding-left: 30px;
-    content: url('./photos/logoactive.png');
-    height: 75px;
-    width: auto;   
-    max-width: 100%; 
-    display: block;
-    flex-shrink: 0;
+#header-left-side a:active img {
+    content: unset;
+    src: url('./photos/logoactive.png');
 }
+
 
 .header-nav a {
     width: 15em;
@@ -366,31 +359,48 @@ footer {
     height: 300px;
 }
 
-
 @media (max-width: 768px) {
 
-    .project-title {
-        padding-top: 25px;
-        box-sizing: border-box;
-        font-size: 1.5em;
-        font-weight: 700;
-        margin-bottom: 5px;
-    }
-    .project-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .middle-square-projects {
+    margin: 0;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-    .project-text {
-        padding-right: 0;
-        margin-bottom: 20px;
-    }
+  #projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
-    .project-image img {
-        width: 100%;
-        height: auto;
-    }
+  .project-card {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+  }
+
+  .project-title {
+    padding-top: 25px;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .project-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+  }
 }
-
-
-
