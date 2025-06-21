@@ -1013,12 +1013,17 @@ footer {
     border-radius: 10px;
 }
 
-.next-steps-paragraphs p:hover {
-    background-color: var(--lilac-color);
-    padding: 20px;
-    border-radius: 10px;
+.next-steps-paragraphs p {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.next-steps-paragraphs p:hover {
+  transform: translateY(-8px); /* lifts the element */
+  box-shadow: 0 8px 15px rgba(147, 112, 219, 0.6), /* subtle purple glow */
+              0 0 10px rgba(147, 112, 219, 0.8); /* glowing effect */
+  border-radius: 10px; /* keep rounded corners */
+  background-color: white; /* optional: better contrast */
+}
 
 /* ============================================================
     Extras
