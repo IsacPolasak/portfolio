@@ -1018,11 +1018,11 @@ footer {
 }
 
 .next-steps-paragraphs p:hover {
-  transform: translateY(-8px); /* lifts the element */
-  box-shadow: 0 8px 15px rgba(147, 112, 219, 0.6), /* subtle purple glow */
-              0 0 10px rgba(147, 112, 219, 0.8); /* glowing effect */
-  border-radius: 10px; /* keep rounded corners */
-  background-color: white; /* optional: better contrast */
+  transform: translateY(-4px); 
+  box-shadow: 0 8px 15px rgba(147, 112, 219, 0.6),
+              0 0 10px rgba(147, 112, 219, 0.8); 
+  border-radius: 10px; 
+  background-color: white; 
 }
 
 /* ============================================================
