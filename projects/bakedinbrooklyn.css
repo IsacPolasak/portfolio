@@ -636,6 +636,7 @@ footer {
     flex-direction: column;
     width: 100%;
     gap: 40px;
+    
 }
 
 /* Each horizontal pair row */
@@ -858,7 +859,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .define-inner p {
@@ -892,59 +893,154 @@ footer {
 =============================================================== */
 
 #prototype {
-    margin: 100px 40px;
     border: solid var(--blue-color) 4px;
     border-radius: 20px;
+    padding: 50px clamp(20px, 5vw, 80px);
+    margin: 100px auto;
+    max-width: calc(90vw - 120px);
+    background: none;
+}
+
+@media (max-width: 850px) {
+    #prototype {
+        max-width: calc(90vw - 50px);
+    }
 }
 
 #prototype h4 {
-    margin-top: -80px;
+    margin-top: -130px;
     justify-self: center;
     font-size: 2.3em;
     padding: 50px;
     background-color: white;
 }
 
-.prototype-main-body {
-    margin: auto 10%;
+.prototype-flex-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
+.define-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.define-col {
+    width: 100%;
+}
+
+@media (min-width: 1050px) {
+    .define-row {
+        flex-direction: row;
+        gap: 48px;
+    }
+    
+    .define-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Low-fidelity + hi-fidelity images */
+#define-prototype-photo,
+#lowfi-prototype-photo,
+#hifi-prototype-photo {
+    max-width: 1000px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+
+.usability-study-proto {
+    background-color: var(--light-blue-bg);
+    border-top: solid var(--blue-color) 4px;
+    border-bottom: solid var(--blue-color) 4px;
+    border-radius: 0px;
+    box-sizing: border-box;
+    padding: 30px 30px 30px 40px;
     display: flex;
     flex-direction: column;
 }
 
-#lowfi-intro-sentence, #hifi-intro-sentence, #usability-intro-sentence, #improvement-intro-sentence {
+.usability-study-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+}
+
+@media (min-width: 1050px) {
+    .usability-study-content {
+        flex-direction: row;
+        gap: 48px;
+    }
+    .usability-study-proto {
+        flex-direction: column;
+        border: none;
+        border-left: solid var(--blue-color) 4px;
+        border-radius: 0px 10px 10px 0px;
+        box-sizing: border-box;
+    }
+}
+
+/* Left column: heading + intro */
+.usability-col-left {
+    min-width: 220px;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#usability-intro-sentence {
+    margin-top: 20px;
     font-weight: 800;
     font-size: 1.5em;
     padding-bottom: 10px;
 }
 
-.low-fidelity-paragraph p, .usability-left p, .hi-fidelity-paragraph p, .hifi-right p, .hi-fidelity p {
-    max-width: 400px;
+.usability-col-left p {
+    max-width: 420px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     line-height: 1.7em;
 }
 
-.lowfi-paragraphs {
+/* Right column: findings */
+.usability-col-right {
+    min-width: 260px;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-top: 20px;
+    border-top: 1.5px dashed #a3c2ed;
+    margin-top: 10px;
 }
 
-#lowfi-paragraph-two {
-    margin: auto;
-    margin-top: 0px;
+@media (min-width: 1050px) {
+    .usability-col-right {
+        padding-left: 32px;
+        border: none;
+        border-left: 1.5px dashed #a3c2ed;
+        margin-left: 10px;
+        padding-top: none;
+    }
+    #lowfi-paragraph-two {
+        margin-top: 50px;
+    }
 }
 
-#lowfi-prototype-photo {
-    max-width: 1000px;
-    margin-bottom: 90px;
-    border-radius: 20px;
-}
-
-.usability-study {
+.usability-findings-wrap-horizontal {
     display: flex;
-}
-
-.usability-right {
-    margin-left: auto;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .usability-findings-title {
@@ -958,47 +1054,74 @@ footer {
     background-position: left bottom;
     transition: background-size 0.3s ease;
 }
-
-.usability-findings-title:hover{
-  background-size: 100% 100%; /* shows highlight on hover */
+.usability-findings-title:hover {
+    background-size: 100% 100%;
+}
+.usability-one, .usability-two {
+    margin-bottom: 20px;
 }
 
-.usability-one {
-    margin-bottom: 15px;
-}
-.usability-one p, .usability-two p{
-    padding: 5px;
+.usability-one p, .usability-two p {
+    padding: 5px 0;
     font-weight: 500;
+    margin-left: 10px;
 }
 
-#usability-intro-sentence {
+/* Responsive: stack everything vertically on mobile */
+@media (max-width: 1049px) {
+    .usability-study-content {
+        flex-direction: column;
+        gap: 0px; /* Eliminate gap between intro and findings */
+    }
+    .usability-col-right {
+        padding-left: 0;
+        border-left: none;
+        margin-left: 0;
+    }
+    .usability-findings-wrap-horizontal {
+        gap: 3px; /* Even tighter between "Round 1" and "Round 2" */
+    }
+}
+
+@media (max-width: 1049px) {
+    .usability-col-left p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Underline for usability study heading */
+.usability-underline {
     text-decoration-line: underline;
     text-decoration-style: double;
     text-decoration-thickness: 1px;
     text-underline-offset: 9px;
 }
 
-.usability-study {
-    border-left: solid var(--blue-color) 5px;
-    padding: 40px;
-    background-color: var(--light-blue-bg);
-    border-radius: 0px 10px 10px 0px;
+/* Low/hi-fidelity intro & improvement headers */
+#lowfi-intro-sentence,
+#hifi-intro-sentence,
+#improvement-intro-sentence {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 1.5em;
+    padding-bottom: 10px;
 }
 
-.hi-fidelity {
-    margin-top: 90px;
-    display: flex;
+
+/* General paragraph styling for prototype */
+.hi-fidelity-paragraph p,
+.hifi-right p,
+.low-fidelity-paragraph p {
+    max-width: 400px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.7em;
 }
 
-.hifi-right {
-    margin-left: auto;
+#lowfi-paragraph-one, #lowfi-paragraph-two {
+    max-width: 400px;
 }
 
-#hifi-prototype-photo {
-    max-width: 1000px;
-    margin-bottom: 90px;
-    border-radius: 10px;
-}
 
 #hifi-intro-sentence a, #lowfi-intro-sentence a {
     text-decoration-line: underline;
@@ -1022,7 +1145,7 @@ footer {
     cursor: pointer;
 }
 
-.tooltip .tooltip-text {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: max-content;
     background-color: var(--blue-color);
@@ -1042,9 +1165,32 @@ footer {
     white-space: nowrap;
 }
 
-.tooltip:hover .tooltip-text {
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+
+@media (min-width: 1050px) {
+    .usability-study-proto {
+        max-width: 1000px; 
+        width: 100%;
+        margin: 50px auto;
+        padding: 10px 45px 10px 45px; 
+    }
+
+    .usability-study-content {
+        gap: 28px; 
+        align-items: flex-start;
+    }
+
+    .usability-findings-wrap-horizontal {
+        gap: 10px;
+    }
+
+    .usability-col-left, .usability-col-right {
+        align-self: stretch;
+    }
 }
 
 /* ============================================================

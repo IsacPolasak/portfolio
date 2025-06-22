@@ -302,86 +302,103 @@
 
             <div id="prototype">
                 <h4>Prototype</h4>
-                <div class="prototype-main-body">
-                    <div class="low-fidelity">
-                        <div class="low-fidelity-paragraph">
-                        <h5 id="lowfi-intro-sentence">
-                        <span class="tooltip">
-                            <a href="https://www.figma.com/proto/r4IF5T34YR2lMMfqi5ClG3/Wireframe-Bakery-app?type=design&node-id=1-3&t=SPCyY6rXCbR7xSox-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design" target="_blank" rel="noopener noreferrer">
-                            Low-Fidelity Prototype
-                            </a>
-                            <span class="tooltip-text">Click to open</span>
-                        </span>
-                        </h5>
-                            <div class="lowfi-paragraphs">
-                                <p>After finalizing the wireframes, I started linking everything together in Figma to map out the main user flow. 
-                                I focused on the checkout process: how someone would add something to their cart and actually complete an order. 
-                                It was a simple way to test how the screens worked together and whether the flow made sense before moving on to 
-                                any visuals or details.</p>
-                                <p id="lowfi-paragraph-two">While building the low-fidelity prototype, I focused on keeping the layout simple and the navigation clear, making 
-                                sure all the key screens connected logically. Since the design was still basic, I concentrated on structure and user
-                                flow rather than visuals or detailed content, which helped keep the focus on functionality first.</p>
+                <div class="prototype-flex-layout">
+                    <!-- Low-Fidelity Row (2 columns) -->
+                    <div class="define-row">
+                        <div class="define-col">
+                            <div class="define-inner">
+                                <h5 id="lowfi-intro-sentence">
+                                <span class="highlight-underline tooltip" tabindex="0">
+                                    <a href="https://www.figma.com/proto/r4IF5T34YR2lMMfqi5ClG3/Wireframe-Bakery-app?type=design&node-id=1-3&t=SPCyY6rXCbR7xSox-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design" target="_blank" rel="noopener noreferrer">
+                                    Low-Fidelity Prototype
+                                    </a>
+                                    <span class="tooltiptext">Click to open</span>
+                                </span>
+                                </h5>
+                                <p id="lowfi-paragraph-one">After finalizing the wireframes, I started linking everything together in Figma to map out the main user flow.
+                                    I focused on the checkout process: how someone would add something to their cart and actually complete an order.
+                                    It was a simple way to test how the screens worked together and whether the flow made sense before moving on to any visuals or details.</p>
                             </div>
                         </div>
-                        <div class="lowfi-photo">
+                        <div class="define-col">
+                            <div class="define-inner">
+                                <p id="lowfi-paragraph-two">
+                                    While building the low-fidelity prototype, I focused on keeping the layout simple and the navigation clear, making
+                                    sure all the key screens connected logically. Since the design was still basic, I concentrated on structure and user
+                                    flow rather than visuals or detailed content, which helped keep the focus on functionality first.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Low-Fidelity Image (below both columns) -->
+                    <div class="define-row">
+                        <div class="define-col define-img-align">
                             <img src="../photos/bib_lowfi.png" alt="Low Fidelity Prototype" id="lowfi-prototype-photo">
                         </div>
                     </div>
-                    <div class="usability-study">
-                        <div class="usability-left">
-                            <h5 id="usability-intro-sentence">Usability Study</h5>
-                            <p>I did two usability studies. The first one influenced the design evolution from wireframes to mockups. The second, 
-                                using a high-fidelity prototype, pinpointed areas in the mockups that needed improvement.</p>
-                        </div>
-                        <div class="usability-right">
-                            <div class="usability-one">
-                                <h5 class="usability-findings-title">Round 1 findings</h5>
-                                <p>Users couldn't read full menu.</p>
-                                <p>Users wanted personal customization options.</p>
-                                <p>Users had difficulty changing the app's language.</p>
+                    <div class="usability-study-proto">
+                        <div class="usability-study-content">
+                            <div class="usability-col-left">
+                                <h5 id="usability-intro-sentence" class="usability-underline">Usability Study</h5>
+                                <p>I did two usability studies. The first one influenced the design evolution from wireframes to mockups.
+                                    The second, using a high-fidelity prototype, pinpointed areas in the mockups that needed improvement.</p>
                             </div>
-                            <div class="usability-two">
-                                <h5 class="usability-findings-title">Round 2 findings</h5>
-                                <p>Users wanted estimated time for food to be ready</p>
-                                <p>Customizations had too many buttons and options to select.</p>
+                            <div class="usability-col-right">
+                                <div class="usability-findings-wrap-horizontal">
+                                    <div class="usability-one">
+                                        <h5 class="usability-findings-title">Round 1 findings</h5>
+                                        <p>Users couldn't read full menu.</p>
+                                        <p>Users wanted personal customization options.</p>
+                                        <p>Users had difficulty changing the app's language.</p>
+                                    </div>
+                                    <div class="usability-two">
+                                        <h5 class="usability-findings-title">Round 2 findings</h5>
+                                        <p>Users wanted estimated time for food to be ready</p>
+                                        <p>Customizations had too many buttons and options to select.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hi-fidelity">
-                        <div class="hifi-left">
-                            <div class="hi-fidelity-paragraph">
-                                <h5 id="hifi-intro-sentence">
-                                <span class="tooltip">
+
+                    <!-- Hi-Fidelity Prototype & Improvements (columns, then image below) -->
+                    <div class="define-row">
+                        <div class="define-col hi-fidelity-paragraph">
+                            <h5 id="hifi-intro-sentence">
+                                <span class="highlight-underline tooltip" tabindex="0">
                                     <a href="https://www.figma.com/proto/r4IF5T34YR2lMMfqi5ClG3/Wireframe-Bakery-app?node-id=303-580&t=13Gpn6eOj3HemM6q-1" target="_blank" rel="noopener noreferrer">
                                     High-Fidelity Prototype
                                     </a>
-                                    <span class="tooltip-text">Click to open</span>
+                                    <span class="tooltiptext">Click to open</span>
                                 </span>
-                                </h5>
-                                <p>When creating the high-fidelity prototype, I built on everything I learned from the low-fidelity version 
-                                    and the usability feedback it generated. I revisited each screen with fresh eyes, making changes 
-                                    to the flow, visuals, and microcopy. For example, I adjusted some of the wording on buttons and labels to
-                                    make them clearer, and I incorporated real images, colors, and branding elements. I also added more visual hierarchy to key elements, like call-to-action buttons 
-                                    and so on. The high-fidelity prototype became a much more realistic version of the final product, allowing me 
-                                    to test not just the functionality, but also how the design felt in a user-world context.</p>
-                            </div>
+                            </h5>
+                            <p>When creating the high-fidelity prototype, I built on everything I learned from the low-fidelity version
+                            and the usability feedback it generated. I revisited each screen with fresh eyes, making changes
+                            to the flow, visuals, and microcopy. For example, I adjusted some of the wording on buttons and labels to
+                            make them clearer, and I incorporated real images, colors, and branding elements. I also added more visual hierarchy to key elements, like call-to-action buttons
+                            and so on. The high-fidelity prototype became a much more realistic version of the final product, allowing me
+                            to test not just the functionality, but also how the design felt in a user-world context.</p>
                         </div>
-                        <div class="hifi-right">
+                        <div class="define-col hifi-right">
                             <h5 id="improvement-intro-sentence">Sample Improvements from User Feedback</h5>
-                            <p><strong>The first</strong> prototype did not include a full menu, and users found that confusing. After the usability study, I 
-                                decided to add a full menu option as well, so users can see everything the bakery has to offer on one page.</p>
-                            <p><strong>The second</strong> usability study revealed the difficulty in customizations when the font become too small, which makes 
-                                the customization process more difficult. I redesigned the selection process to be a dropdown menu.</p>
+                            <p><strong>The first</strong> prototype did not include a full menu, and users found that confusing. After the usability study, I
+                            decided to add a full menu option as well, so users can see everything the bakery has to offer on one page.</p>
+                            <p><strong>The second</strong> usability study revealed the difficulty in customizations when the font become too small, which makes
+                            the customization process more difficult. I redesigned the selection process to be a dropdown menu.</p>
                         </div>
                     </div>
-                    <div class="hifi-photo">
-                        <picture>
-                            <source srcset="../photos/bib_hifi_smallscreen.png" media="(max-width: 1049px)">
-                            <img src="../photos/bib_hifi.png" alt="High Fidelity Prototype" id="hifi-prototype-photo">
-                        </picture>
+                    <!-- Hi-Fidelity Image (below both columns) -->
+                    <div class="define-row">
+                        <div class="define-col define-img-align">
+                            <picture>
+                                <source srcset="../photos/bib_hifi_smallscreen.png" media="(max-width: 1049px)">
+                                <img src="../photos/bib_hifi.png" alt="High Fidelity Prototype" id="hifi-prototype-photo">
+                            </picture>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
             <div id="test">
                 <h4>Test</h4>
