@@ -50,6 +50,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    background-color: var(--white-color);
 }
 
 .header-right {
@@ -58,6 +59,13 @@ header {
     padding: 0px 50px;
     flex-shrink: 0;
     white-space: nowrap;
+}
+
+#header-left-side {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
 }
 
 #header-left-side img {
@@ -78,8 +86,8 @@ header {
     src: url('../photos/logoactive.png');
 }
 
+
 .header-nav a {
-    background-color: white;
     width: 15em;
     font-weight: 600;
     font-size: 1.2em;

@@ -1,23 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.getElementById("header-image");
+document.addEventListener("DOMContentLoaded", function () {
+  const logo = document.getElementById("header-image");
+  
+  if (logo) {
+    const isProjectPage = window.location.pathname.includes("/projects/");
+    const basePath = isProjectPage ? "../photos/" : "./photos/";
 
-    if (logo) {
-        logo.addEventListener("mouseover", () => {
-            logo.src = "./photos/logohover.png";
-        });
+    logo.addEventListener("mouseover", () => {
+      logo.src = `${basePath}logohover.png`;
+    });
 
-        logo.addEventListener("mousedown", () => {
-            logo.src = "./photos/logoactive.png";
-        });
+    logo.addEventListener("mousedown", () => {
+      logo.src = `${basePath}logoactive.png`;
+    });
 
-        logo.addEventListener("mouseup", () => {
-            logo.src = "./photos/headerlogo.png";
-        });
+    logo.addEventListener("mouseup", () => {
+      logo.src = `${basePath}logohover.png`;
+    });
 
-        logo.addEventListener("mouseleave", () => {
-            logo.src = "./photos/headerlogo.png";
-        });
-    }
+    logo.addEventListener("mouseleave", () => {
+      logo.src = `${basePath}headerlogo.png`;
+    });
+  }
 });
 
 
@@ -81,3 +84,25 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(rollOnce, 30000);
 });
 
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const headerImg = document.getElementById("header-image");
+//   const logoLink = document.getElementById("logo-link");
+
+//   logoLink.addEventListener("mouseover", function () {
+//     headerImg.src = "../photos/logohover.png";
+//   });
+
+//   logoLink.addEventListener("mouseout", function () {
+//     headerImg.src = "../photos/headerlogo.png";
+//   });
+
+//   logoLink.addEventListener("mousedown", function () {
+//     headerImg.src = "../photos/logoactive.png";
+//   });
+
+//   logoLink.addEventListener("mouseup", function () {
+//     headerImg.src = "../photos/logohover.png";
+//   });
+// });
