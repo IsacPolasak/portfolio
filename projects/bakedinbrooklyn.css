@@ -86,7 +86,6 @@ header {
     src: url('../photos/logoactive.png');
 }
 
-
 .header-nav a {
     width: 15em;
     font-weight: 600;
@@ -317,44 +316,45 @@ footer {
 /* ============================================================
     Proj Quick links
 =============================================================== */
-/* — fluid Quick-links row — */
+
 #quicklinks {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(8px, 2vw, 40px);      
-  margin: clamp(10px, 5vw, 40px);   /* outer space shrinks 40 →10 */
-  padding: clamp(10px, 5vw, 50px);  /* inner space shrinks 50 →10 */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(8px, 2vw, 40px);      
+    margin: clamp(10px, 5vw, 40px);   /* outer space shrinks 40 →10 */
+    padding: clamp(10px, 5vw, 50px);  /* inner space shrinks 50 →10 */
 }
+
 .local-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  width:  clamp(70px, 10vw, 160px);
-  aspect-ratio: 160 / 201;
-  padding:     clamp(5px, 1.25vw, 20px);
-  background: var(--white-color);
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  text-align: center;
-  transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width:  clamp(70px, 10vw, 160px);
+    aspect-ratio: 160 / 201;
+    padding:     clamp(5px, 1.25vw, 20px);
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .local-nav img.icon {
-  width:  clamp(40px, 6.25vw, 100px);
-  height: clamp(40px, 6.25vw, 100px);
-  object-fit: contain;
-  margin-bottom: clamp(6px, 1.5vw, 10px);
+    width:  clamp(40px, 6.25vw, 100px);
+    height: clamp(40px, 6.25vw, 100px);
+    object-fit: contain;
+    margin-bottom: clamp(6px, 1.5vw, 10px);
 }
 
 .local-nav p {
-  margin: 0;
-  font-weight: bold;
-  color: #33363F;
-  font-size: clamp(0.6rem, 1.5vw, 1rem);
-  white-space: nowrap;
+    margin: 0;
+    font-weight: bold;
+    color: #33363F;
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    white-space: nowrap;
 }
 
 
@@ -457,6 +457,8 @@ footer {
     padding: 50px clamp(20px, 5vw, 80px) clamp(20px, 5vw, 80px);
     margin: 40px auto;
     max-width: calc(90vw - 120px);
+    margin-bottom: 100px;
+    margin-top: 50px;
 }
 
 .empathize-wrapper {
@@ -524,6 +526,7 @@ footer {
     font-family: caveat;
     font-size: 1.5em;
     color: #33363F;
+    margin-top: 50px;
 }
 
 .user-quotes blockquote span {
@@ -581,104 +584,143 @@ footer {
     Define
 =============================================================== */
 
-
 #define {
-    margin: 100px 40px;
     border: solid rgb(32, 208, 96) 4px;
     border-radius: 20px;
+    padding: 50px clamp(20px, 5vw, 80px);
+    margin: 40px auto;
+    max-width: calc(90vw - 120px);
+}
+
+@media (max-width: 850px) {
+    #define {
+        max-width: calc(90vw - 50px);
+    }
 }
 
 #define h4 {
-    /* Main define title */
-    margin-top: -80px;
+    margin-top: -130px;
     justify-self: center;
     font-size: 2.3em;
     padding: 50px;
     background-color: white;
 }
 
-.define-middle-box {
-    margin: auto 10%;
-    display: flex;
-    flex-direction: column;
+#define img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-#intro-sentence-define, #developing-persona-sentence, #user-journey-title, .how-might-we h5 {
+
+@media (min-width: 1050px) {
+    #define img {
+        height: auto;
+        border-radius: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* --- LAYOUT FLEX STRUCTURE --- */
+
+.define-wrapper,
+.define-flex-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
+/* Each horizontal pair row */
+.define-row {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    /* gap: 32px; */
+}
+
+/* Column inside each row */
+.define-col {
+    width: 100%;
+    margin-left: auto;
+}
+
+@media (min-width: 1050px) {
+
+    .define-row {
+        flex-direction: row;
+        gap: 48px;
+    }
+    .define-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .persona-paragraphs {
+        max-width: 350px;
+    }
+}
+
+/* --- HEADINGS & EMPHASIS --- */
+
+#intro-sentence-define,
+#developing-persona-sentence,
+#user-journey-title,
+.how-might-we h5 {
     font-weight: 800;
     font-size: 1.5em;
     padding-bottom: 10px;
 }
 
-.define-paragraphs p, .user-persona-left p {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    max-width: 400px;
-    line-height: 1.7em;
-}
+/* --- PARAGRAPHS --- */
 
-.define-paragraphs {
-    display: flex;
-}
-
-#define-paragraph-two {
-    margin: auto;
-    margin-top: 0px;
-}
-
-.user-persona {
-    display: flex;
-}
-
-.define-user-persona {
-        margin-top: 50px;
-}
-
-.user-persona-left {
-    margin-right: 20px;
-    margin-bottom: 50px;
-}
-
-#user-persona-izba {
-    margin-top: 10px;
-    max-width: 700px;
-    margin-right: -150px;
-}
-
+.define-paragraphs,
+.user-persona,
 .define-user-journey {
     display: flex;
 }
 
-.user-journey-right {
-    max-width: 250px;
-}
-
-.user-journey-left {
-    max-width: 400px;
+/* Paragraph details */
+.define-paragraphs p,
+.user-persona-left p,
+.user-journey-left p {
+    margin-top: 10px;
     margin-bottom: 20px;
+    max-width: 400px;
     line-height: 1.7em;
 }
 
-.user-journey-left p {
+#define-paragraph-two {
+    margin: auto;
+    margin-top: -10px;
+}
+
+
+/* --- USER JOURNEY --- */
+.user-journey-left {
     max-width: 400px;
+    line-height: 1.7em;
 }
 
 #user-journey-izba {
     max-width: 720px;
 }
 
+/* --- HOW MIGHT WE --- */
+
 .how-might-we {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 600px;
-    margin-top: 50px;
+    max-width: 550px;
     margin-bottom: 50px;
 }
 
-
 #how-might-we-title {
-    font-size: 1.1em;
-    /* margin-bottom: 10px; */
+    font-size: 1.15em;
     display: inline;
     background: linear-gradient(to top, rgb(32, 208, 96), 90%, transparent 90%);
     background-size: 0% 100%; 
@@ -686,17 +728,72 @@ footer {
     background-position: left bottom;
     transition: background-size 0.3s ease;
     margin: 10px 30px;
+    font-weight: 1000;
 }
 
-#how-might-we-title:hover{
-  background-size: 100% 100%; /* shows highlight on hover */
+.define-row p {
+    line-height: 1.7em;
+}
+
+.define-row .define-col:first-child p + p {
+    margin-top: 2em;
+}
+
+#how-might-we-title:hover {
+    background-size: 100% 100%;
+}
+
+.how-might-we {
+    margin-left: 50px;
 }
 
 .how-might-we p {
     margin: 10px 30px;
-    line-height: 1.7em;
+    line-height: 1.3em;
+    font-weight: 500;
 }
 
+#how-might-we-paragraph {
+    margin-left: 0px;
+    line-height: 1.7em;
+    font-weight: 400;
+}
+
+/* --- MAIN CONTENT WRAPPER (optional for flex consistency) --- */
+.define-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#define-paragraph-one {
+    margin-bottom: 2em;
+}
+
+@media (min-width: 1050px) {
+    #define #user-persona-izba,
+    #define #user-journey-izba {
+        width: 110%;
+        max-width: none;
+        display: block;
+        margin-left: -10px;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+
+    #define-paragraph-two {
+        margin-top: 35px;
+    }
+
+    .define-row {
+        align-items: flex-start !important;
+    }
+
+    #define-paragraph-one {
+        margin-bottom: none;
+    }
+}
 
 
 /* ============================================================
