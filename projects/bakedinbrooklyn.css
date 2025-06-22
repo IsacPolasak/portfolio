@@ -448,9 +448,7 @@ footer {
     background-color: white;
 }
 
-/* ============================================================
-   Empathize (match .project-overview)
-   ============================================================ */
+
 #empathize {
     border: solid rgb(255, 79, 184) 4px;
     border-radius: 20px;
@@ -899,6 +897,7 @@ footer {
     margin: 100px auto;
     max-width: calc(90vw - 120px);
     background: none;
+    
 }
 
 @media (max-width: 850px) {
@@ -1196,15 +1195,27 @@ footer {
 /* ============================================================
     Testing
 =============================================================== */
-
 #test {
-    margin: 100px 40px;
-    border: solid rgb(255, 111, 0) 4px;
+    border: 4px solid rgb(255, 111, 0);
     border-radius: 20px;
+    padding: 50px clamp(20px, 5vw, 80px);
+    margin: 100px auto;
+    max-width: calc(90vw - 120px);
+    background: none;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+@media (max-width: 850px) {
+    #test {
+        max-width: calc(90vw - 50px);
+        padding: 30px 10px;
+        margin: 40px auto;
+    }
 }
 
 #test h4 {
-    margin-top: -80px;
+    margin-top: -130px;
     justify-self: center;
     font-size: 2.3em;
     padding: 50px;
@@ -1212,9 +1223,41 @@ footer {
 }
 
 .test-main-body {
-    margin: auto 10%;
     display: flex;
-    padding-bottom: 20px;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
+@media (min-width: 1050px) {
+    .test-main-body {
+        flex-direction: row;
+        gap: 48px;
+        align-items: flex-start;
+    }
+    .test-left, #test-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 850px) {
+    .test-main-body {
+        flex-direction: column;
+        gap: 0;
+    }
+    .test-left,
+    #test-right {
+        max-width: 100%;
+        margin: 0;
+    }
+    .test-left {
+        margin-left: 30px;
+    }
+    #test-right {
+        margin-top: 30px;
+    }
 }
 
 #user-feedback-intro, #test-intro-sentence {
@@ -1223,18 +1266,24 @@ footer {
     padding-bottom: 10px;
 }
 
-.test-left p  {
+.test-left p {
     max-width: 400px;
     margin-top: 10px;
     margin-bottom: 20px;
     line-height: 1.7em;
 }
 
-
 #test-right {
-    margin-left: auto;
     max-width: 450px;
+    margin-left: auto;
 }
+
+@media (max-width: 1100px) {
+  #test-right {
+    margin-left: 20px !important;
+  }
+}
+
 
 #test-right blockquote {
     border-radius: 0px 10px 10px 0px;
@@ -1255,39 +1304,61 @@ footer {
     margin-top: 5px;
     color: #555;
 }
-
 /* ============================================================
     Conclusion
 =============================================================== */
 
-
 #conclusion {
-    margin: 100px 40px 20px 40px;
     border: solid rgb(151, 151, 151) 4px;
     border-radius: 20px;
+    padding: 50px clamp(20px, 5vw, 80px);
+    margin: 100px auto;
+    max-width: calc(90vw - 120px);
+    background: none;
+    margin-bottom: 100px;
+    margin-top: 50px;
 }
 
 #conclusion h4 {
-    margin-top: -80px;
+    margin-top: -130px;
     justify-self: center;
     font-size: 2.3em;
     padding: 50px;
     background-color: white;
 }
 
+.conclusion-main-body {
+    width: 100%;
+}
+
 .conclusion-top {
-    margin: auto 10%;
     display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    margin: auto 10%;
     padding-bottom: 20px;
 }
 
-.conclusion-left h5, .conclusion-right h5, .next-steps h5 {
+.conclusion-left,
+.conclusion-right {
+    flex: 1;
+}
+
+.conclusion-right {
+    margin-left: auto;
+    max-width: 450px;
+}
+
+.conclusion-left h5,
+.conclusion-right h5,
+.next-steps h5 {
     font-weight: 800;
     font-size: 1.5em;
     padding-bottom: 10px;
 }
 
-.conclusion-left p, .conclusion-right p  {
+.conclusion-left p,
+.conclusion-right p {
     max-width: 400px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -1296,11 +1367,6 @@ footer {
 
 .conclusion-right p {
     font-weight: 500;
-}
-
-.conclusion-right {
-    margin-left: auto;
-    max-width: 450px;
 }
 
 .next-steps h5 {
@@ -1326,19 +1392,55 @@ footer {
     background-color: var(--background-color);
     padding: 20px;
     border-radius: 10px;
-}
-
-.next-steps-paragraphs p {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .next-steps-paragraphs p:hover {
-  transform: translateY(-4px); 
-  box-shadow: 0 8px 15px rgba(147, 112, 219, 0.6),
-              0 0 10px rgba(147, 112, 219, 0.8); 
-  border-radius: 10px; 
-  background-color: white; 
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 15px rgba(147, 112, 219, 0.6),
+                0 0 10px rgba(147, 112, 219, 0.8); 
+    border-radius: 10px; 
+    background-color: white; 
 }
+
+/* Responsive for conclusion section */
+@media (max-width: 850px) {
+    #conclusion {
+        max-width: calc(90vw - 50px);
+        padding: 30px 10px;
+        margin: 40px auto 20px auto;
+    }
+    .conclusion-top {
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        padding-bottom: 0;
+    }
+    .conclusion-right {
+        margin-left: 30px;
+        max-width: 100%;
+        margin-top: 30px;
+    }
+    .conclusion-left {
+        margin-left: 30px;
+    }
+}
+
+
+@media (max-width: 850px) {
+  .next-steps-paragraphs {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .next-steps-paragraphs p {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: unset;
+  }
+}
+
 
 /* ============================================================
     Extras
@@ -1374,4 +1476,59 @@ footer {
     background-color: gray;
 }
 
+
+#empathize h4,
+#define h4,
+#ideate h4,
+#prototype h4,
+#test h4,
+#conclusion h4 {
+    margin-top: -130px;
+    font-size: 2.3em;
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+#empathize,
+#define,
+#ideate,
+#prototype,
+#test,
+#conclusion {
+    padding: 50px clamp(20px, 5vw, 80px);
+    margin: 100px auto;
+}
+
+#conclusion {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  html, body, main, main > div {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box;
+  }
+  #empathize,
+  #define,
+  #ideate,
+  #prototype,
+  #test,
+  #conclusion {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 100px !important;
+    margin-bottom: 20px !important;
+    padding-left: 12px !important;   /* <-- ADD LEFT PADDING */
+    padding-right: 12px !important;  /* <-- ADD RIGHT PADDING */
+    border-radius: 30px !important;
+    box-sizing: border-box;
+  }
+}
 
