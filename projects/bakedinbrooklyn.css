@@ -309,36 +309,46 @@ footer {
 /* ============================================================
     Proj Quick links
 =============================================================== */
-
+/* — fluid Quick-links row — */
 #quicklinks {
-    margin: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    font-size: 1.4em;
-    font-weight: 700;
-    padding: 50px;
-
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(8px, 2vw, 40px);      
+  margin: clamp(10px, 5vw, 40px);   /* outer space shrinks 40 →10 */
+  padding: clamp(10px, 5vw, 50px);  /* inner space shrinks 50 →10 */
+}
+.local-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  width:  clamp(70px, 10vw, 160px);
+  aspect-ratio: 160 / 201;
+  padding:     clamp(5px, 1.25vw, 20px);
+  background: var(--white-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .local-nav img.icon {
-    height: 100px;
-    width: 100px;
-    object-fit: contain;
-    margin-bottom: 10px;
+  width:  clamp(40px, 6.25vw, 100px);
+  height: clamp(40px, 6.25vw, 100px);
+  object-fit: contain;
+  margin-bottom: clamp(6px, 1.5vw, 10px);
 }
 
-
-.local-nav {
-    padding: 20px;
-    width: 160px;
-    border-radius: 10px;
-    border: solid 4px transparent;
-    text-align: center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    background-color: var(--white-color);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+.local-nav p {
+  margin: 0;
+  font-weight: bold;
+  color: #33363F;
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+  white-space: nowrap;
 }
+
 
 /* Neon glow on hover */
 #empathize-icon-div:hover {
@@ -377,6 +387,7 @@ footer {
     color: var(--yellow-color);
 }
 
+
 #prototype-icon-div:hover {
     border: solid 4px var(--blue-color);
     box-shadow: 0 0 5px var(--blue-color),
@@ -403,7 +414,7 @@ footer {
 }
 
 #conclusion-icon-div:hover {
-    border: solid 4px rgb(151, 151, 151);
+    border: solid 4px var rgb(151, 151, 151);
     box-shadow: 0 0 5px rgb(151, 151, 151),
                 0 0 10px rgb(151, 151, 151);
     transform: scale(1.05); 
@@ -414,47 +425,71 @@ footer {
     color: rgb(151, 151, 151);
 }
 
-.local-nav img.icon {
-    height: 100px;
-    width: 100px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
-
-.local-nav p {
-    color: #33363F;
-    margin-top: 10px;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
 
 
 /* ============================================================
     Empathize
 =============================================================== */
 
-#empathize {
-    margin: auto 40px;
-    border: solid rgb(255, 79, 184) 4px;
-    border-radius: 20px;
-}
 
 #empathize h4 {
-    margin-top: -80px;
+    margin-top: -130px;
     justify-self: center;
     font-size: 2.3em;
     padding: 50px;
     background-color: white;
 }
 
-.empathize-bottom {
-    margin: auto 10%;
-    display: flex;
+/* ============================================================
+   Empathize (match .project-overview)
+   ============================================================ */
+#empathize {
+    border: solid rgb(255, 79, 184) 4px;
+    border-radius: 20px;
+    padding: 50px clamp(20px, 5vw, 80px) clamp(20px, 5vw, 80px);
+    margin: 40px auto;
+    max-width: calc(90vw - 120px);
 }
 
-.empathize-left-side {
+.empathize-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.empathize-bottom {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.empathize-main {
+    flex: 1;
+    min-width: 250px;
+    max-width: 450px;
+}
+
+.empathize-secondary {
+    flex: 0 1 auto;
+    margin-left: auto;
+}
+
+@media (max-width: 850px) {
+    #empathize {
+        max-width: calc(90vw - 50px);
+    }
+    .empathize-bottom {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .empathize-secondary {
+        margin-left: 0;
+    }
+}
+.empathize-left-side {
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 #intro-sentence-empathize {
@@ -471,8 +506,9 @@ footer {
 }
 
 #empathize-right-side {
-    margin-left: 10%;
+    flex: 0 1 300px; 
     max-width: 500px;
+    margin-left: auto;
 }
 
 .user-quotes blockquote {
@@ -486,7 +522,6 @@ footer {
     font-family: quicksand;
     font-size: 0.7em;
 }
-
 
 .pain-points h5 {
     margin-top: 20px;
@@ -510,8 +545,7 @@ footer {
 }
 
 .empathize-takeaways {
-    /* justify-self: center; */
-    margin: 50px 135px;
+    margin: 50px 20px;
 }
 
 .empathize-takeaways h5 {
@@ -526,7 +560,7 @@ footer {
 }
 
 .empathize-takeaways h5:hover{
-  background-size: 100% 100%; /* shows highlight on hover */
+    background-size: 100% 100%; /* shows highlight on hover */
 }
 
 .empathize-takeaways li {
@@ -534,7 +568,6 @@ footer {
     font-weight: 500;
     padding-top: 15px;
 }
-
 
 /* ============================================================
     Define
@@ -1060,4 +1093,5 @@ footer {
 #back-to-quicklinks:active {
     background-color: gray;
 }
+
 
