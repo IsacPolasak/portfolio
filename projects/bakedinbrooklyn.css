@@ -621,6 +621,11 @@ footer {
         margin-top: 0;
         margin-bottom: 0;
     }
+
+}
+
+#user-journey-izba {
+    border-radius: 0 !important;
 }
 
 /* --- LAYOUT FLEX STRUCTURE --- */
@@ -638,7 +643,7 @@ footer {
     display: flex;
     align-items: stretch;
     flex-direction: column;
-    /* gap: 32px; */
+
 }
 
 /* Column inside each row */
