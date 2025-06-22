@@ -248,21 +248,28 @@
 
             <div id="ideate">
                 <h4>Ideate</h4>
-                <div class="ideate-main-body">
-                    <div class="ideate-intro-paragraph">
-                        <h5 id="intro-sentence-ideate">Starting The Design</h5>
-                        <p>To begin ideating, I reflected on the insights from my research and interviews, 
-                            allowing recurring user needs to guide me in my brainstorming. Instead of formal 
-                            exercises like Crazy 8s, <strong>I opted for a more fluid and iterative approach:</strong> sketching 
-                            rough ideas whenever inspiration hit. This allowed me to explore a variety of potential 
-                            features in a more organic way, focusing on solving specific pain points such as 
-                            customization, speed, and simplicity. By keeping the focus on real, everyday user 
-                            struggles, I was able to come up with ideas that felt both useful and genuinely thoughtful.</p>
+                <div class="define-flex-layout"> <!-- Use same class as Define for consistency -->
+                    <!-- Ideation Intro -->
+                    <div class="define-row">
+                        <div class="define-col">
+                            <div class="define-inner">
+                                <h5 id="intro-sentence-ideate">Starting The Design</h5>
+                                <p>To begin ideating, I reflected on the insights from my research and interviews, 
+                                    allowing recurring user needs to guide me in my brainstorming. Instead of formal 
+                                    exercises like Crazy 8s, <strong>I opted for a more fluid and iterative approach:</strong> sketching 
+                                    rough ideas whenever inspiration hit. This allowed me to explore a variety of potential 
+                                    features in a more organic way, focusing on solving specific pain points such as 
+                                    customization, speed, and simplicity. By keeping the focus on real, everyday user 
+                                    struggles, I was able to come up with ideas that felt both useful and genuinely thoughtful.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="paper-wireframes">
-                        <div id="paper-wireframe-paragraphs"> 
+                    <!-- Paper Wireframe Row -->
+                    <div class="define-row">
+                        <div class="define-col persona-paragraphs">
                             <h5 id="paper-wireframe-title">Paper Wireframes</h5>
-                            <p>I chose to start with the homepage because it sets the tone for the entire user experience. 
+                            <p>
+                                I chose to start with the homepage because it sets the tone for the entire user experience. 
                                 It’s the first impression and a key factor in encouraging users to engage with the app. I explored 
                                 several variations, experimenting with layout, hierarchy, and content. For each version, I starred 
                                 elements that resonated most, whether it was the structure, visual flow, or clarity of information. 
@@ -270,18 +277,23 @@
                                 balanced functionality with a welcoming and intuitive design.
                             </p>
                         </div>
-                        <div id="paper-wireframe-photo">
+                        <div class="define-col define-img-align">
+                            <div class="define-img-spacer"></div>
                             <img src="../photos/bib_paperwireframe.png" alt="Paper wireframe" id="photo-paper-wireframe">
                         </div>
                     </div>
-                    <div class="digital-wireframes">
-                        <div id="digital-wireframe-paragraphs">
+                    <!-- Digital Wireframe Row -->
+                    <div class="define-row">
+                        <div class="define-col persona-paragraphs">
                             <h5 id="digital-wireframe-title">Digital Wireframes</h5>
-                            <p>After sketching out a paper wireframe I was happy with, I started building a digital version. 
+                            <p>
+                                After sketching out a paper wireframe I was happy with, I started building a digital version. 
                                 This helped me clean things up, get a better feel for spacing and flow, and bring the layout 
-                                closer to how it might actually look on a screen.</p>
+                                closer to how it might actually look on a screen.
+                            </p>
                         </div>
-                        <div id="digital-wireframe-photo">
+                        <div class="define-col define-img-align">
+                            <div class="define-img-spacer"></div>
                             <img src="../photos/bib_digitalwireframe.png" alt="Digital wireframe" id="photo-digital-wireframe">
                         </div>
                     </div>
@@ -363,7 +375,10 @@
                         </div>
                     </div>
                     <div class="hifi-photo">
-                        <img src="../photos/bib_hifi.png" alt="High Fidelity Prototype" id="hifi-prototype-photo">
+                        <picture>
+                            <source srcset="../photos/bib_hifi_smallscreen.png" media="(max-width: 1049px)">
+                            <img src="../photos/bib_hifi.png" alt="High Fidelity Prototype" id="hifi-prototype-photo">
+                        </picture>
                     </div>
                 </div>
             </div>
