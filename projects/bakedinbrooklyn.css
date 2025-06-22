@@ -1530,5 +1530,17 @@ footer {
     border-radius: 30px !important;
     box-sizing: border-box;
   }
+
+    #quicklinks {
+    gap: clamp(4px, 1vw, 16px); 
+  }
+  .local-nav {
+    width: clamp(63px, 9vw, 144px);
+    padding: clamp(4px, 1vw, 18px); 
+  }
+  .local-nav img.icon {
+    width: clamp(36px, 5.5vw, 90px); 
+    height: clamp(36px, 5.5vw, 90px);
+  }
 }
 
