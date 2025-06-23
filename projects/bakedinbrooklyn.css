@@ -1114,6 +1114,12 @@ footer {
     padding-bottom: 10px;
 }
 
+#lowfi-intro-sentence a,
+#hifi-intro-sentence a {
+    color: var(--blue-color);
+}
+
+
 
 /* General paragraph styling for prototype */
 .hi-fidelity-paragraph p,
