@@ -1137,9 +1137,9 @@ footer {
 
 
 #hifi-intro-sentence a, #lowfi-intro-sentence a {
+    color: black;
     text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 3px;
     text-underline-offset: 9px;
 }   
 

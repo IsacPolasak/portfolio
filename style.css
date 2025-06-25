@@ -206,8 +206,7 @@ main {
     color: var(--lighter-text);
     font-size: 1em;
     text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
     text-underline-offset: 4px;
 }
 
@@ -248,48 +247,34 @@ main {
     font-weight: 600;
     font-size: 1.1em;
     padding: 0 15px;
-    border: 2px solid transparent;        /* use 2px to match hover */
-    border-bottom: 5px solid transparent; /* same bottom thickness */
+    border: 2px solid transparent;
+    border-bottom: 5px solid transparent;
     border-radius: 20px;
     color: var(--lighter-text);
 }
 
-.home-bottom-nav-list a {
+.home-bottom-nav-list {
     color: var(--lighter-text);
     text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
     text-underline-offset: 5px;
 }
 
-.home-bottom-nav-list:hover a {
+.home-bottom-nav-list a:hover{
+    color: var(--blue-color);
+}
+
+.home-bottom-nav-list a:active {
+    text-decoration-line: none; 
     text-decoration: none;
-}
-
-.home-bottom-nav-list:hover {
-    background-color: white;
-    font-weight: 600;
-    font-size: 1.1em;
-    color: var(--text-color);
-    padding: 0 15px;
-    border: 2px solid var(--text-color);        /* use 2px to match hover */
-    border-bottom: 5px solid var(--text-color); /* same bottom thickness */
-}
-
-.home-bottom-nav-list:active {
-    background-color: var(--lilac-color);
-    font-weight: 600;
-    font-size: 1.1em;
-    color: var(--text-color);
-    padding: 0 15px;
-    border: 2px solid var(--text-color);        /* use 2px to match hover */
-    border-bottom: 5px solid var(--text-color); /* same bottom thickness */
+    color: var(--lilac-color);
+    font-size: 0.9em;
 }
 
 #home-bottom-more {
     padding-top: 10px;
     color: rgb(146, 145, 145);
-    margin-left: 10px;
+    margin-left: 15px;
     cursor: default;
     pointer-events: none;
     font-weight: 500;

@@ -279,10 +279,10 @@ footer {
     font-size: 1em;
     display: flex;
     gap: 20px;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 7px;
+    /* text-decoration-line: underline; */
+    /* text-decoration-style: wavy; */
+    /* text-decoration-thickness: 2px;
+    text-underline-offset: 7px; */
 }
 
 #email-contact a:hover {
@@ -298,15 +298,17 @@ footer {
     display: flex;
     gap: 10px;
 }
+
+
 #phone-contact #number {
     font-weight: 500;
     font-size: 1em;
     display: flex;
     gap: 20px;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline;
     text-decoration-style: wavy;
     text-decoration-thickness: 1px;
-    text-underline-offset: 7px;
+    text-underline-offset: 7px; */
 }
 
 #phone-contact #number:hover {
