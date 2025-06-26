@@ -154,7 +154,6 @@ header {
     }
 }
 
-
 /* ============================================================
     Main Styles - Homepage
 =============================================================== */
@@ -167,7 +166,6 @@ main {
     align-items: center;     /* center vertically */
     min-height: calc(100vh - 100px); /* adjust 100px to match header height */
 }
-
 
 /* ============================================================
     Footer Styles - Homepage
@@ -211,7 +209,6 @@ footer {
     font-size: 0.9em;
     padding-right: 10px;
 }
-
 
 .footer-right {
     display: flex;
@@ -1063,11 +1060,11 @@ footer {
     margin-left: 10px;
 }
 
-/* Responsive: stack everything vertically on mobile */
+
 @media (max-width: 1049px) {
     .usability-study-content {
         flex-direction: column;
-        gap: 0px; /* Eliminate gap between intro and findings */
+        gap: 0px; 
     }
     .usability-col-right {
         padding-left: 0;
@@ -1075,7 +1072,7 @@ footer {
         margin-left: 0;
     }
     .usability-findings-wrap-horizontal {
-        gap: 3px; /* Even tighter between "Round 1" and "Round 2" */
+        gap: 3px; 
     }
 }
 
@@ -1093,7 +1090,6 @@ footer {
     text-underline-offset: 9px;
 }
 
-/* Low/hi-fidelity intro & improvement headers */
 #lowfi-intro-sentence,
 #hifi-intro-sentence,
 #improvement-intro-sentence {
@@ -1109,8 +1105,6 @@ footer {
 }
 
 
-
-/* General paragraph styling for prototype */
 .hi-fidelity-paragraph p,
 .hifi-right p,
 .low-fidelity-paragraph p {

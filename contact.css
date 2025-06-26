@@ -261,6 +261,10 @@ footer {
     display: flex;
 }
 
+/* #resume-contact a {
+    font-size: 1em;
+    font-weight: 700;
+} */
 
 #middle-contact-left {
     font-size: 1.4em;
@@ -274,16 +278,13 @@ footer {
     display: flex;
     gap: 20px;
 }
+
 #email-contact a {
     padding-bottom: 5px;
     font-weight: 500;
     font-size: 1em;
     display: flex;
     gap: 20px;
-    /* text-decoration-line: underline; */
-    /* text-decoration-style: wavy; */
-    /* text-decoration-thickness: 2px;
-    text-underline-offset: 7px; */
 }
 
 #email-contact a:hover {
@@ -294,7 +295,7 @@ footer {
     color: #5a689b;
 }
 
-#phone-contact {
+#phone-contact, #resume-contact {
     padding-top: 10px;
     display: flex;
     gap: 10px;
@@ -306,10 +307,6 @@ footer {
     font-size: 1em;
     display: flex;
     gap: 20px;
-    /* text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 7px; */
 }
 
 #phone-contact #number:hover {
