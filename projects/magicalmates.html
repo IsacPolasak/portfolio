@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset='UTF-8'>
-    <meta name="robots" content="noindex,noarchive, nofollow" />
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta name="googlebot" content="noindex,nofollow,noarchive">
+    <meta name="bingbot" content="noindex,nofollow,noarchive">
+    <meta name="baiduspider" content="noindex,nofollow,noarchive">
+    <meta name="yandex" content="noindex,nofollow,noarchive">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +18,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-    <script src='script.js'></script>
+    <script src='../script.js'></script>
 </head>
 <body>
     <header>
 <!-- Start header -->
         <!-- Left side of header -->
         <div id="header-left-side">
-            <a href="./index.html">
-                <img src="../photos/headerlogo.png" alt="Isac" title="Isac" id="header-image">
+            <a href="../index.html" id="logo-link">
+                <img src="../photos/headerlogo.png" alt="Isac" id="header-image">
             </a>
         </div>
         <!-- End left side of header -->
@@ -43,12 +47,410 @@
     </header>
 <!-- End header -->
 
-
 <!-- Start main -->
     <main>
     <!-- Projects middle square -->
         <div>
-            <h1>Coming Soon!</h1>
+            <div class="project-title-part">
+                <h2 id="actual-project-title">Magical Mates</h2>
+                <p id="short-proj-desc">A magical companion for stories, routines, and connections.</p>
+                <div>
+                    <img src="../photos/magicalmatesoverview.png" alt="Magical Mates overview" id="magicalmates-overview">
+                </div>
+            </div>
+            <div class="project-overview">
+                <div>
+                    <h3 id="project-overview-title">Project Overview</h3>
+                    <div class="overview-top-text">
+                        <div class="overview-top-left-text">
+                            <p id="overview-first-paragraph"><strong class="strong">Product:</strong> Magical Mates is a smart stuffed animal and app that helps children 
+                                build routines and spark imagination. Parents use the app to send voice messages and stories, which are delivered 
+                                through the plush toy using AI-generated audio.</strong></p>
+                            <p><strong class="strong">Problem:</strong> Parents want to reduce screen time while staying connected and supporting 
+                                routines. Most tools lack emotional warmth or imaginative play.</p>
+                            <p><strong class="strong">Goal:</strong> Create a magical, screen-free experience that helps families stay connected, build routines, and spark 
+                                imagination through smart, voice-enabled plush toys.</p>
+                        </div>
+                        <div class="overview-top-right-text">
+                            <div class="top-right-text-left">
+                                <p><strong>Tools</strong></p>
+                                <p>Figma</p>
+                                <p>Adobe</p>
+                                <p>Photopea</p>
+                            </div>
+                            <div class="top-right-text-middle">
+                                <p><strong>Timeline</strong></p>
+                                <p>3 weeks</p>
+                            </div>
+                            <div class="top-right-text-right">
+                                <p><strong>Tasks</strong></p>
+                                <p>Research</p>
+                                <p>Branding</p>
+                                <p>UX/UI</p>
+                                <p>Prototyping</p>
+                                <p>Usability-testing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="quicklinks">
+                <a href="#empathize">
+                    <div class="local-nav" id="empathize-icon-div">
+                        <img src="../photos/empathize.png" alt="empathize icon" class="icon" id="empathize-icon">
+                        <p>Empathize</p>
+                    </div>
+                </a>
+                <a href="#define">
+                    <div class="local-nav" id="define-icon-div">
+                        <img src="../photos/define.png" alt="define icon" class="icon" id="define-icon">
+                        <p>Define</p>
+                    </div>
+                </a>
+                <a href="#ideate">
+                    <div class="local-nav" id="ideate-icon-div">
+                        <img src="../photos/ideate.png" alt="ideate icon" class="icon" id="ideate-icon">
+                        <p>Ideate</p>
+                    </div>
+                </a>
+                <a href="#prototype">
+                    <div class="local-nav" id="prototype-icon-div">
+                        <img src="../photos/prototyping.png" alt="prototype icon" class="icon" id="prototype-icon">
+                        <p>Prototype</p>
+                    </div>
+                </a>
+                <a href="#test">
+                    <div class="local-nav" id="test-icon-div">
+                        <img src="../photos/test.png" alt="test icon" class="icon" id="test-icon">
+                        <p>Test</p>
+                    </div>
+                </a>
+                <a href="#conclusion">
+                    <div class="local-nav" id="conclusion-icon-div">
+                        <img src="../photos/conclusion.png" alt="conclusion icon" class="icon" id="conclusion-icon">
+                        <p>Conclusion</p>
+                    </div>
+                </a>
+            </div>
+
+            <div id="empathize">
+                <h4 id="empathize-title">Empathize</h4>
+                <div class="empathize-wrapper">
+                    <div class="empathize-bottom">
+                    <div class="empathize-main">
+                        <div id="empathize-left-side">
+                        <h5 id="intro-sentence-empathize">Understanding The Problem and The User</h5>
+                        <div class="empathize-paragraphs">
+                            <p><strong>Before conducting research,</strong> I assumed that the typical bakery customers were busy adults who valued high-quality, affordable food they couldn’t easily make at home, often grabbing breakfast or lunch on the go.</p>
+                            <p><strong>Through user interviews and observation,</strong> I confirmed that most customers were professionals with demanding morning routines who didn’t have time to wait in long lines or to customize orders on the spot. Many expressed frustration over delays during peak hours and wished for a quicker, more convenient way to place their usual orders.</p>
+                            <p><strong>In speaking with staff,</strong> I also discovered how overwhelming the morning rush could be. They often had to repeatedly explain menu items and handle custom orders under pressure, which slowed down service and increased stress. These insights highlighted a shared pain point between customers and staff: a system that would reduce wait times by alleviating stress on both ends, and making mornings smoother for everyone.</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="empathize-secondary">
+                        <div id="empathize-right-side">
+                        <div class="user-quotes">
+                            <blockquote>“I love their avocado toast but hate waiting in line every morning.”<br><span>— Customer, 34</span></blockquote>
+                            <blockquote>“We’re always slammed during rush hour and can’t customize every sandwich.”<br><span>— Staff Member, 26</span></blockquote>
+                        </div>
+                        <div class="pain-points">
+                            <h5>Pain Points</h5>
+                            <div id="pain-points-paragraphs">
+                            <p><strong>Timeliness:</strong> Customers need their orders quickly so they can be on time for work or school.</p>
+                            <p><strong>Customizations:</strong> Many want to choose exactly what they eat via custom menu options.</p>
+                            <p><strong>Speed:</strong> Busy people don’t have time to wait for their food to be made.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>  <!-- end .empathize-bottom -->
+                </div>  <!-- end .empathize-wrapper -->
+                <div class="empathize-takeaways">
+                    <h5>Key Takeaways:</h5>
+                    <ol type="I">
+                        <li>Customers are short on time in the mornings.</li>
+                        <li>Long lines and menu explanations delay service.</li>
+                        <li>Both customers and staff are frustrated during rush hours.</li>
+                    </ol>
+                </div>
+            </div>
+            
+
+            <div id="define">
+                <h4>Define</h4>
+                <div class="define-flex-layout">
+                    <!-- Framing The Problem + Design Challenge -->
+                    <div class="define-row">
+                        <div class="define-col">
+                            <div class="define-inner">
+                            <h5 id="intro-sentence-define">Framing The Problem</h5>
+                            <p id="define-paragraph-one"><strong>Through research and interviews,</strong> it became clear that both groups are affected by the same bottleneck: 
+                                in-person ordering during high-traffic times. Customers are often in a rush and don’t have time to 
+                                customize their meals on the spot, while staff members are overwhelmed by the volume of orders and constant 
+                                need to clarify menu items. This dual frustration results in long lines, slower service, and stress for everyone involved.</p>
+                            </div>
+                        </div>
+                        <div class="define-col">
+                            <div class="define-inner">
+                            <p id="define-paragraph-two">The design challenge is to create a solution that streamlines the ordering process, reduces pressure on staff, and fits 
+                                seamlessly into users’ fast-paced routines. <strong>Busy Brooklyn customers and overwhelmed bakery staff need a faster and easier way to place 
+                                and manage customized food orders during peak hours.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Persona Paragraph + Persona Image -->
+                    <div class="define-row">
+                        <div class="define-col persona-paragraphs">
+                            <h5 id="developing-persona-sentence">Developing The Persona</h5>
+                                <p><strong>From my user interviews,</strong> I found a recurring theme among customers: time pressure, picky eaters, and the challenge of ordering food 
+                                that fits everyone’s preferences, especially in the morning. Many parents, particularly moms, mentioned how stressful it can be to 
+                                juggle their children’s food needs with their tight schedules. One of these users inspired the persona of Samantha.</p>
+                                <p>Samantha is a busy mom of two who juggles school drop-offs, work, and errands, and all before 9 am. Her kids are picky eaters, 
+                                and while she wants them to eat something filling and nutritious before school, ordering breakfast is often a time-consuming 
+                                struggle. She gets frustrated when places don’t allow for quick customization or when she has to wait in long lines during peak 
+                                hours. Samantha values speed, flexibility, and the ability to order ahead without needing to explain everything in person. While 
+                                she doesn’t consider herself a “techy” person, she’s open to solutions that genuinely make her hectic mornings easier.</p>
+                        </div>
+                        <div class="define-col define-img-align">
+                            <div class="define-img-spacer"></div>
+                            <img src="../photos/userpersonachristina.png" alt="User persona" id="user-persona-christina">
+                        </div>
+                    </div>
+                    <!-- User Journey Paragraph + Journey Image -->
+                    <div class="define-row">
+                        <div class="define-col persona-paragraphs">
+                            <h5 id="user-journey-title">Mapping The User Journey</h5>
+                            <p>Looking at this journey, it’s clear that mornings can get pretty chaotic for parents like Samantha, especially when they’re juggling hungry, picky kids and a tight schedule. While ordering online, there are a few other things that could make life easier. For example, showing real-time wait times could help parents decide when to order, and being able to save favorite combos would speed up repeat visits. Highlighting allergy-friendly options or popular customizations from other families could take some of the stress out of ordering for kids with special diets.</p>
+                        </div>
+                        <div class="define-col define-img-align">
+                            <div class="define-img-spacer"></div>
+                            <img src="../photos/userjourneychristina.png" alt="User journey" id="user-journey-christina">
+                        </div>
+                    </div>
+                    <!-- How Might We -->
+                    <div class="how-might-we">
+                        <h5> Problem Statements</h5>
+                        <p id="how-might-we-paragraph">Considering Samantha’s goals, pain points, and context as a busy parent, I created a range of “How Might We” questions. 
+                            These statements helped guide my ideation and keep the user’s core needs at the center of the solution. </p> 
+                        <div class="how-might-we-text">
+                            <h5 id="how-might-we-title">How might we...</h5>
+                            <p>Help busy customers customize their orders quickly without needing to explain preferences in person?</p>
+                            <p>Reduce long wait times during morning rush hours?</p>
+                            <p>Allow users to order ahead with confidence, knowing exactly what comes on each menu item?</p>
+                            <p>Support bakery staff by reducing repetitive questions about ingredients and customizations?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="ideate">
+                <h4>Ideate</h4>
+                <div class="define-flex-layout"> <!-- Use same class as Define for consistency -->
+                    <!-- Ideation Intro -->
+                    <div class="define-row">
+                        <div class="define-col">
+                            <div class="define-inner">
+                                <h5 id="intro-sentence-ideate">Starting The Design</h5>
+                                <p>To begin ideating, I reflected on the insights from my research and interviews, 
+                                    allowing recurring user needs to guide me in my brainstorming. Instead of formal 
+                                    exercises like Crazy 8s, <strong>I opted for a more fluid and iterative approach:</strong> sketching 
+                                    rough ideas whenever inspiration hit. This allowed me to explore a variety of potential 
+                                    features in a more organic way, focusing on solving specific pain points such as 
+                                    customization, speed, and simplicity. By keeping the focus on real, everyday user 
+                                    struggles, I was able to come up with ideas that felt both useful and genuinely thoughtful.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Paper Wireframe Row -->
+                    <div class="define-row">
+                        <div class="define-col persona-paragraphs">
+                            <h5 id="paper-wireframe-title">Paper Wireframes</h5>
+                            <p>
+                                I chose to start with the homepage because it sets the tone for the entire user experience. 
+                                It’s the first impression and a key factor in encouraging users to engage with the app. I explored 
+                                several variations, experimenting with layout, hierarchy, and content. For each version, I starred 
+                                elements that resonated most, whether it was the structure, visual flow, or clarity of information. 
+                                I then combined these strongest aspects into a final paper wireframe, creating a homepage that 
+                                balanced functionality with a welcoming and intuitive design.
+                            </p>
+                        </div>
+                        <div class="define-col define-img-align">
+                            <div class="define-img-spacer"></div>
+                            <img src="../photos/bib_paperwireframe.png" alt="Paper wireframe" id="photo-paper-wireframe">
+                        </div>
+                    </div>
+                    <!-- Digital Wireframe Row -->
+                    <div class="define-row">
+                        <div class="define-col persona-paragraphs">
+                            <h5 id="digital-wireframe-title">Digital Wireframes</h5>
+                            <p>
+                                After sketching out a paper wireframe I was happy with, I started building a digital version. 
+                                This helped me clean things up, get a better feel for spacing and flow, and bring the layout 
+                                closer to how it might actually look on a screen.
+                            </p>
+                        </div>
+                        <div class="define-col define-img-align">
+                            <div class="define-img-spacer"></div>
+                            <img src="../photos/bib_digitalwireframe.png" alt="Digital wireframe" id="photo-digital-wireframe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="prototype">
+                <h4>Prototype</h4>
+                <div class="prototype-flex-layout">
+                    <!-- Low-Fidelity Row (2 columns) -->
+                    <div class="define-row">
+                        <div class="define-col">
+                            <div class="define-inner">
+                                <h5 id="lowfi-intro-sentence">
+                                <span class="highlight-underline tooltip" tabindex="0">
+                                    <a href="https://www.figma.com/proto/r4IF5T34YR2lMMfqi5ClG3/Wireframe-Bakery-app?type=design&node-id=1-3&t=SPCyY6rXCbR7xSox-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design" target="_blank" rel="noopener noreferrer">
+                                    Low-Fidelity Prototype
+                                    </a>
+                                    <span class="tooltiptext">Click to open</span>
+                                </span>
+                                </h5>
+                                <p id="lowfi-paragraph-one">After finalizing the wireframes, I started linking everything together in Figma to map out the main user flow.
+                                    I focused on the checkout process: how someone would add something to their cart and actually complete an order.
+                                    It was a simple way to test how the screens worked together and whether the flow made sense before moving on to any visuals or details.</p>
+                            </div>
+                        </div>
+                        <div class="define-col">
+                            <div class="define-inner">
+                                <p id="lowfi-paragraph-two">
+                                    While building the low-fidelity prototype, I focused on keeping the layout simple and the navigation clear, making
+                                    sure all the key screens connected logically. Since the design was still basic, I concentrated on structure and user
+                                    flow rather than visuals or detailed content, which helped keep the focus on functionality first.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Low-Fidelity Image (below both columns) -->
+                    <div class="define-row">
+                        <div class="define-col define-img-align">
+                            <img src="../photos/bib_lowfi.png" alt="Low Fidelity Prototype" id="lowfi-prototype-photo">
+                        </div>
+                    </div>
+                    <div class="usability-study-proto">
+                        <div class="usability-study-content">
+                            <div class="usability-col-left">
+                                <h5 id="usability-intro-sentence" class="usability-underline">Usability Study</h5>
+                                <p>I did two usability studies. The first one influenced the design evolution from wireframes to mockups.
+                                    The second, using a high-fidelity prototype, pinpointed areas in the mockups that needed improvement.</p>
+                            </div>
+                            <div class="usability-col-right">
+                                <div class="usability-findings-wrap-horizontal">
+                                    <div class="usability-one">
+                                        <h5 class="usability-findings-title">Round 1 findings</h5>
+                                        <p>Users couldn't read full menu.</p>
+                                        <p>Users wanted personal customization options.</p>
+                                        <p>Users had difficulty changing the app's language.</p>
+                                    </div>
+                                    <div class="usability-two">
+                                        <h5 class="usability-findings-title">Round 2 findings</h5>
+                                        <p>Users wanted estimated time for food to be ready</p>
+                                        <p>Customizations had too many buttons and options to select.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hi-Fidelity Prototype & Improvements (columns, then image below) -->
+                    <div class="define-row">
+                        <div class="define-col hi-fidelity-paragraph">
+                            <h5 id="hifi-intro-sentence">
+                                <span class="highlight-underline tooltip" tabindex="0">
+                                    <a href="https://www.figma.com/proto/r4IF5T34YR2lMMfqi5ClG3/Wireframe-Bakery-app?node-id=303-580&t=13Gpn6eOj3HemM6q-1" target="_blank" rel="noopener noreferrer">
+                                    High-Fidelity Prototype
+                                    </a>
+                                    <span class="tooltiptext">Click to open</span>
+                                </span>
+                            </h5>
+                            <p>When creating the high-fidelity prototype, I built on everything I learned from the low-fidelity version
+                            and the usability feedback it generated. I revisited each screen with fresh eyes, making changes
+                            to the flow, visuals, and microcopy. For example, I adjusted some of the wording on buttons and labels to
+                            make them clearer, and I incorporated real images, colors, and branding elements. I also added more visual hierarchy to key elements, like call-to-action buttons
+                            and so on. The high-fidelity prototype became a much more realistic version of the final product, allowing me
+                            to test not just the functionality, but also how the design felt in a user-world context.</p>
+                        </div>
+                        <div class="define-col hifi-right">
+                            <h5 id="improvement-intro-sentence">Sample Improvements from User Feedback</h5>
+                            <p><strong>The first</strong> prototype did not include a full menu, and users found that confusing. After the usability study, I
+                            decided to add a full menu option as well, so users can see everything the bakery has to offer on one page.</p>
+                            <p><strong>The second</strong> usability study revealed the difficulty in customizations when the font become too small, which makes
+                            the customization process more difficult. I redesigned the selection process to be a dropdown menu.</p>
+                        </div>
+                    </div>
+                    <!-- Hi-Fidelity Image (below both columns) -->
+                    <div class="define-row">
+                        <div class="define-col define-img-align">
+                            <picture>
+                                <source srcset="../photos/bib_hifi_smallscreen.png" media="(max-width: 1049px)">
+                                <img src="../photos/bib_hifi.png" alt="High Fidelity Prototype" id="hifi-prototype-photo">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="test">
+                <h4>Test</h4>
+                <div class="test-main-body">
+                    <div class="test-left">
+                        <h5 id="test-intro-sentence">Gathering Feedback</h5>
+                        <p>After building the high-fidelity prototype, I tested it with several users to see how well the flow held up in real-world use. I asked participants 
+                        to go through key tasks like placing an order or checking out, and I paid close attention to where they hesitated or got confused. Some feedback 
+                        confirmed things were working well, while other parts, like button placement or unclear labels, needed refining. These testing sessions helped me 
+                        catch small usability issues I might have missed on my own, and they shaped the final tweaks I made before wrapping up the design.</p>
+                    </div>
+                    <div id="test-right">
+                        <h5 id="user-feedback-intro">What Users Said</h5>
+                        <blockquote>“I liked that the cart was always accessible. Some apps make it hard to find.”<br><span>— Tester 1</span></blockquote>
+                        <blockquote>“It’s super cute that the section in the menus get bigger when in it.”<br><span>— Tester 2</span></blockquote>
+                        <blockquote>“I wasn’t sure if toppings cost extra. It should say that upfront.”<br><span>— Tester 3</span></blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div id="conclusion">
+                <h4>Conclusion</h4>
+                <div class="conclusion-main-body">
+                    <div class="conclusion-top">
+                        <div class="conclusion-left">
+                            <h5>Final Thoughts</h5>
+                            <p>Looking back on the whole process from digging into user needs, to sketching and prototyping, to testing and tweaking, I learned a lot about what 
+                            really makes a design work. It showed me how important it is to keep iterating and paying attention to the little things that can make the experience 
+                            smoother and more enjoyable for users.</p>
+                        </div>
+                        <div class="conclusion-right">
+                            <h5>Accessibility considerations</h5>
+                            <p>Used easy-to-understand and familiar iconography, so users are not confused with the ordering process.</p>
+                            <p>Added images for visual effect. Users with difficulty reading can easily understand and access the application.</p>
+                        </div>
+                    </div>
+                
+                    <div class="next-steps">
+                        <h5>Next Steps</h5>
+                        <div class="next-steps-paragraphs">
+                            <p>Making the app functional, so users can get to use it.</p>
+                            <p>Conduct an additional round of usability studies to verify if pain-points are now resolved.</p>
+                            <p>Conduct more research to see what additional features users would like to see.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="back-to-quicklinks-container">
+                <a id="back-to-quicklinks" href="#">^</a>
+            </div>
         </div>
     <!-- End Projects middle square -->
     </main>
@@ -56,12 +458,13 @@
      <footer>
         <p id="footer-paragraph">© 2025 Isac Polasak | <a href="mailto:Levipolasak@gmail.com" class="bottom-email">Levipolasak@gmail.com</a></p>
         <div class="footer-right">
-            <a href="isacpolasakresume.pdf" target="_blank" class="resume-button">Resume</a>
+            <a href="../isacpolasakresume.pdf" target="_blank" class="resume-button">Resume</a>
             <a href="https://www.linkedin.com/in/polasak/" target="_blank" rel="noopener noreferrer">
-                <img src="./photos/linkedin.png" alt="LinkedIn" id="footer-image">
+                <img src="../photos/linkedin.png" alt="LinkedIn" id="footer-image">
             </a>
         </div>
      </footer>
 </body>
+
 </html>
 

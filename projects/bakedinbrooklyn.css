@@ -278,40 +278,28 @@ footer {
     margin-bottom: 20px;
 }
 
-
-.overview-top-text {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; 
-    align-items: flex-start;
+.problem-solution-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.overview-top-left-text{
-  flex: 0 1 450px;
-  max-width: 450px;
-  min-width: 0; 
+.problem-text,
+.solution-text {
+  flex: 1 1 300px; 
   line-height: 1.5em;
 }
 
-.overview-top-right-text {
-    flex: 0 1 150px;
-    margin-left: auto; 
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    justify-content: flex-start; 
-    gap: 15px;      
-    
+.tools-list {
+  font-size: 1em;
+  line-height: 1.5em;
 }
 
-.top-right-text-middle {
-    margin: 0 10px;
+.tools-list p {
+    margin-top: 10px;
 }
-
-.strong{
-    font-weight: 700;
-}
-
 
 #bib-overview {
     width: 95vw;
