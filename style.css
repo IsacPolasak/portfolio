@@ -176,6 +176,7 @@ main {
     border: solid var(--text-color) 2px;
     border-radius: 5px;
     box-sizing: border-box;
+    box-shadow: 6px 6px rgb(0, 0, 0, 0.5);
 }
 
 

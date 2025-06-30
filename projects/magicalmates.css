@@ -276,6 +276,9 @@ footer {
 
 #overview-first-paragraph {
     margin-top: 20px;
+}
+
+.overview-paragraphs {
     margin-bottom: 20px;
 }
 
@@ -312,6 +315,8 @@ footer {
 .strong{
     font-weight: 700;
 }
+
+
 
 
 #magicalmates-overview {
@@ -491,19 +496,6 @@ footer {
     margin-left: auto;
 }
 
-@media (max-width: 850px) {
-    #empathize {
-        max-width: calc(90vw - 50px);
-    }
-    .empathize-bottom {
-        flex-direction: column;
-        gap: 0px;
-    }
-
-    .empathize-secondary {
-        margin-left: 0;
-    }
-}
 .empathize-left-side {
     flex: 1 1 0;
     min-width: 0;
@@ -541,7 +533,12 @@ footer {
     font-size: 0.7em;
 }
 
+.bottom-empathize {
+    display: flex;
+}
+
 .pain-points h5 {
+    max-width: 450px;
     margin-top: 20px;
     font-size: 1.5em;
     text-align: center;
@@ -560,10 +557,13 @@ footer {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
     border-radius: 0px 0px 20px 20px;
     padding: 20px 30px;
+    max-width: 450px;
 }
 
 .empathize-takeaways {
-    margin: 50px 20px;
+    margin-left: auto;
+    padding-left: 50px;
+    padding-top: 75px;
 }
 
 .empathize-takeaways h5 {
@@ -585,6 +585,30 @@ footer {
     list-style-type: upper-roman;
     font-weight: 500;
     padding-top: 15px;
+}
+
+@media (max-width: 850px) {
+    #empathize {
+        max-width: calc(90vw - 50px);
+    }
+    .empathize-bottom {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .empathize-secondary {
+        margin-left: 0;
+    }
+
+    .empathize-takeaways {
+        margin: 30px 20px;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+    
+    .bottom-empathize {
+        flex-direction: column;
+    }
 }
 
 /* ============================================================
@@ -631,7 +655,7 @@ footer {
 
 }
 
-#user-journey-izba {
+#user-journey-christina {
     border-radius: 0 !important;
 }
 
@@ -718,7 +742,7 @@ footer {
     line-height: 1.7em;
 }
 
-#user-journey-izba {
+#user-journey-christina {
     max-width: 720px;
 }
 
@@ -748,9 +772,6 @@ footer {
     line-height: 1.7em;
 }
 
-.define-row .define-col:first-child p + p {
-    margin-top: 2em;
-}
 
 #how-might-we-title:hover {
     background-size: 100% 100%;
@@ -781,12 +802,12 @@ footer {
 }
 
 #define-paragraph-one {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 @media (min-width: 1050px) {
-    #define #user-persona-izba,
-    #define #user-journey-izba {
+    #define #user-persona-christina,
+    #define #user-journey-christina {
         width: 110%;
         max-width: none;
         display: block;
