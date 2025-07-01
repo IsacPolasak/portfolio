@@ -286,31 +286,21 @@ footer {
     align-items: flex-start;
 }
 
-.overview-top-left-text{
-  flex: 0 1 450px;
-  max-width: 450px;
-  min-width: 0; 
-  line-height: 1.5em;
+.overview-top-left-text{ 
+    max-width: 450px;
+    min-width: 0; 
+    line-height: 1.5em;
 }
 
 .overview-top-right-text {
-    flex: 0 1 150px;
-    margin-left: auto; 
-    display: flex;
-    justify-content: space-between;
+    margin-left: 100px; 
     box-sizing: border-box;
-    justify-content: flex-start; 
-    gap: 15px;      
+    padding-top: 20px;
 }
 
-.top-right-text-middle {
-    margin: 0 10px;
+.overview-top-right-text p {
+    padding-bottom: 10px;
 }
-
-.strong {
-    font-weight: 700;
-}
-
 
 #magicalmates-overview {
     width: 95vw;
@@ -318,7 +308,6 @@ footer {
     border-radius: 20px;
     margin-bottom: 40px;
 }
-
 
 .tools-list {
     font-size: 1em;
@@ -334,6 +323,13 @@ footer {
     height: 40vw;
     border-radius: 20px;
     margin-bottom: 40px;
+}
+
+@media (max-width: 1050px) {
+    .overview-top-right-text {
+        margin-left: 0;
+        padding-top: 0;
+    }
 }
 
 
@@ -419,7 +415,6 @@ footer {
     color: var(--yellow-color);
 }
 
-
 #prototype-icon-div:hover {
     border: solid 4px var(--blue-color);
     box-shadow: 0 0 5px var(--blue-color),
@@ -431,7 +426,6 @@ footer {
 #prototype-icon-div:hover p {
     color: var(--blue-color);
 }
-
 
 #test-icon-div:hover {
     border: solid 4px rgb(255, 111, 0);
@@ -456,8 +450,6 @@ footer {
 #conclusion-icon-div:hover p {
     color: rgb(151, 151, 151);
 }
-
-
 
 /* ============================================================
     Empathize
@@ -489,7 +481,7 @@ footer {
 
 .empathize-main {
     display: flex;
-    gap: 50px;
+    /* gap: 50px; */
 }
 
 #intro-sentence-empathize {
@@ -511,7 +503,8 @@ footer {
 
 .empathize-right-side {
     max-width: 450px;
-    margin-left: auto;
+    width: 100%;
+    margin-left: 100px;
 }
 
 .empathize-right-side blockquote {
@@ -529,7 +522,6 @@ footer {
 
 .bottom-empathize {
     display: flex;
-    gap: 50px;
 }
 
 .pain-points {
@@ -537,9 +529,9 @@ footer {
     width: 100%;
 }
 
-
 .pain-points-paragraphs {
     max-width: 450px;
+    width: 100%;
 }
 
 .pain-points h5 {
@@ -564,8 +556,8 @@ footer {
 }
 
 .empathize-takeaways {
-    margin-left: auto;
     padding-top: 20px;
+    margin-left: 100px;
 }
 
 .empathize-takeaways li {
@@ -594,6 +586,7 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
     .empathize-takeaways, .empathize-right-side {
         margin-left: 0;
         margin-top: 0;
@@ -664,8 +657,7 @@ footer {
 }
 
 .define-top-right {
-    padding-left: 50px;
-    margin-left: auto;
+    margin-left: 100px;;
 }
 
 #define img {
@@ -694,6 +686,10 @@ footer {
         min-width: 450px;
         margin-right: 0;
     }
+
+    .define-top-left {
+        margin-bottom: 10px;
+    }
 }
 
 .define-bottom {
@@ -707,11 +703,9 @@ footer {
 }
 
 #user-journey-izba {
-    margin-top: 40px;
     border-radius: 0 !important;
     max-width: 720px;
 }
-
 
 .persona-image {
     margin-bottom: 60px;
@@ -721,13 +715,7 @@ footer {
     margin-bottom: 30px;
 }
 
-.journey-image {
-  display: flex;
-  align-items: center;     /* vertical if you need it */
-  justify-content: center; /* horizontal center */
-}
-
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
     .define-top {
         display: flex;
         flex-direction: column;
@@ -738,8 +726,8 @@ footer {
         padding-left: 0;
     }
 
-    #user-journey-izba {
-        margin-top: 25px;
+    .journey-image {
+        padding-top: 30px;
     }
 }
 
@@ -833,11 +821,6 @@ footer {
     padding-bottom: 20px;
 
 }
-/* 
-.ideate-top {
-    max-width: 450px;
-    line-height: 1.7em;
-} */
 
 .ideate-middle, .ideate-bottom {
     display: flex;
@@ -931,16 +914,17 @@ footer {
     line-height: 1.7em;
     display: flex;
     margin-bottom: 30px;
-    gap: 50px;
 }
 
 .prototype-top-paragraphs p {
     max-width: 450px;
+    width: 100%;
 }
 
 #lowfi-paragraph-two {
-  margin-left: auto;     /* REMOVE auto */
-  max-width: 450px;   /* ensure this is enforced */
+    max-width: 450px;   /* ensure this is enforced */
+    width: 100%;
+    margin-left: 100px;
 }
 
 
@@ -1140,23 +1124,21 @@ footer {
     opacity: 1;
 }
 
-
 .hi-fidelity-paragraphs {
     display: flex;
-    gap: 50px;
 }
 
 .hi-fidelity-paragraphs p{
     line-height: 1.7em;
 }
 
-.prototype-bottom-left {
+.prototype-bottom-left, .prototype-bottom-right {
     max-width: 450px;
+    width: 100%;
 }
 
-.prototype-bottom-right {
-    max-width: 450px;
-    margin-left: auto;
+.prototype-bottom-right { 
+    margin-left: 100px;
 }
 
 .prototype-bottom-right p {
@@ -1167,14 +1149,17 @@ footer {
 }
 
 @media (max-width: 1150px) {
+
     .hi-fidelity-paragraphs {
         display: flex;
         flex-direction: column;
     }
     .prototype-bottom-right {
+        margin-top: 30px;
         margin-left: 0;
     }
 }
+
 /* ============================================================
     Testing
 =============================================================== */
@@ -1210,7 +1195,7 @@ footer {
     margin-bottom: 10px;
 }
 
-#test-right blockquote {
+.test-right blockquote {
     border-radius: 0px 10px 10px 0px;
     padding: 20px;
     background-color: rgb(255, 207, 170);
@@ -1218,11 +1203,10 @@ footer {
     font-size: 1.3em;
     color: #33363F;
     margin-bottom: 25px;
-    padding-left: 15px;
     border-left: 3px solid rgb(255, 111, 0); 
 }
 
-#test-right span {
+.test-right span {
     display: block;
     font-family: 'Quicksand', sans-serif;
     font-size: 0.75em;
@@ -1233,7 +1217,6 @@ footer {
 .test-main-body {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
 }
 
 .test-main-body p {
@@ -1242,20 +1225,22 @@ footer {
 
 .test-left {
     max-width: 450px;
+    width: 100%;
 }
 
-
-#test-right blockquote {
-  width: 100%;
-  max-width: 450px;
-  box-sizing: border-box;
+.test-right {
+    margin-left: 100px;
 }
 
 @media (max-width: 1050px) {
     .test-main-body {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+    }
+
+    .test-right {
+        margin-top: 30px;
+        margin-left: 0;
     }
 }
 
@@ -1275,6 +1260,7 @@ footer {
     margin-bottom: 100px;
     margin-top: 50px;
 }
+
 @media (max-width: 850px) {
     #conclusion {
         max-width: calc(90vw - 50px);
@@ -1289,16 +1275,15 @@ footer {
     background-color: white;
 }
 
-
 .conclusion-top {
     display: flex;
-    gap: 50px;
     padding-bottom: 20px;
 }
 
 .conclusion-right {
-    margin-left: auto;
     max-width: 450px;
+    width: 100%;
+    margin-left: 100px;
 }
 
 .conclusion-left h5,

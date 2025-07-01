@@ -277,7 +277,7 @@ footer {
 
 .problem-solution-container {
     display: flex;
-    gap: 40px;
+    gap: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
     flex-wrap: wrap;
@@ -286,22 +286,20 @@ footer {
 .problem-text,
 .solution-text {
     flex: 1 1 300px; 
-    line-height: 1.5em;
+    line-height: 1.7em;
     max-width: 450px;
 }
 
-.solution-text {
+/* .solution-text {
     margin-left: auto;
-}
+} */
 
 @media (max-width: 1050px) {
     .solution-text {
-    margin-left: 0px;
-    margin-bottom: 20px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
 }
-
-}
-
 .tools-list {
     font-size: 1em;
     line-height: 1.5em;
@@ -444,17 +442,6 @@ footer {
 /* ============================================================
     Empathize
 =============================================================== */
-
-
-#empathize h4 {
-    margin-top: -130px;
-    justify-self: center;
-    font-size: 2.3em;
-    padding: 50px;
-    background-color: white;
-}
-
-
 #empathize {
     border: solid rgb(255, 79, 184) 4px;
     border-radius: 20px;
@@ -465,6 +452,21 @@ footer {
     margin-top: 50px;
 }
 
+
+@media (max-width: 850px) {
+    #empathize {
+        max-width: calc(90vw - 50px);
+    }
+}
+
+#empathize h4 {
+    margin-top: -130px;
+    justify-self: center;
+    font-size: 2.3em;
+    padding: 50px;
+    background-color: white;
+}
+
 .empathize-wrapper {
     display: flex;
     flex-direction: column;
@@ -472,40 +474,23 @@ footer {
 }
 
 .empathize-bottom {
+    /* gap: 100px; */
     display: flex;
-    gap: 2rem;
     align-items: flex-start;
+ 
 }
 
 .empathize-main {
     flex: 1;
-    min-width: 250px;
+    /* min-width: 250px; */
     max-width: 450px;
 }
 
-.empathize-secondary {
-    flex: 0 1 auto;
-    margin-left: auto;
-}
-
-@media (max-width: 850px) {
-    #empathize {
-        max-width: calc(90vw - 50px);
-    }
-    .empathize-bottom {
-        flex-direction: column;
-        gap: 0px;
-    }
-
-    .empathize-secondary {
-        margin-left: 0;
-    }
-}
 
 .empathize-left-side {
     max-width: 450px;
+    width: 100%;
 }
-
 
 #intro-sentence-empathize {
     font-weight: 800;
@@ -519,9 +504,10 @@ footer {
     line-height: 1.7em;
 }
 
-#empathize-right-side {
+.empathize-right-side {
     max-width: 450px;
-    margin-left: auto;
+    width: 100%;
+    margin-left: 100px;
 }
 
 .user-quotes blockquote {
@@ -585,6 +571,25 @@ footer {
     background-size: 100% 100%; /* shows highlight on hover */
 }
 
+@media (max-width: 1150px) {
+    .empathize-bottom {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .empathize-secondary {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .user-quotes blockquote {
+        margin-top: 20px;
+    }
+
+    .empathize-right-side {
+        margin-left: 0;
+    }
+}
 
 /* ============================================================
     Define
@@ -632,8 +637,8 @@ footer {
 }
 
 .define-top-right {
-    padding-left: 50px;
-    margin-left: auto;
+    padding-left: 100px;
+    /* margin-left: auto; */
 }
 
 #define img {
@@ -849,7 +854,6 @@ footer {
         line-height: 1.7em;
     }
 
-
     #photo-paper-wireframe, #photo-digital-wireframe {
         margin-left: 0;
         padding-left: 0;
@@ -894,18 +898,19 @@ footer {
     line-height: 1.7em;
     display: flex;
     margin-bottom: 30px;
-    gap: 50px;
+    /* gap: 100px; */
 }
 
 .prototype-top-paragraphs p {
     max-width: 450px;
+    width: 100%;
 }
 
 #lowfi-paragraph-two {
-  margin-left: auto;     /* REMOVE auto */
-  max-width: 450px;   /* ensure this is enforced */
+    max-width: 450px;   
+    width: 100%;
+    margin-left: 100px;
 }
-
 
 @media (max-width: 1150px) {
     .prototype-top-paragraphs {
@@ -929,7 +934,6 @@ footer {
     width: 100%;
     height: auto;
 }
-
 
 .usability-study-proto {
     box-sizing: border-box;
@@ -981,7 +985,7 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     padding-left: 0;
-    padding-top: 20px;
+    padding-top: 10px;
     border-top: 1.5px dashed #a3c2ed;
     margin-top: 10px;
 }
@@ -1004,10 +1008,9 @@ footer {
         border: none;
         border-left: 1.5px dashed #a3c2ed;
         margin-left: 10px;
-        padding-top: none;
+        padding-top: 0;
     }
 }
-
 
 .usability-findings-title {
     font-weight: 800;
@@ -1106,7 +1109,6 @@ footer {
 
 .hi-fidelity-paragraphs {
     display: flex;
-    gap: 50px;
 }
 
 .hi-fidelity-paragraphs p{
@@ -1115,11 +1117,13 @@ footer {
 
 .prototype-bottom-left {
     max-width: 450px;
+    width: 100%;
 }
 
 .prototype-bottom-right {
     max-width: 450px;
-    margin-left: auto;
+    width: 100%;
+    margin-left: 100px;
 }
 
 .prototype-bottom-right p {
@@ -1136,6 +1140,11 @@ footer {
     }
     .prototype-bottom-right {
         margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .usability-findings-wrap-horizontal {
+        margin-top: 10px;
     }
 }
 /* ============================================================
@@ -1173,7 +1182,7 @@ footer {
     margin-bottom: 10px;
 }
 
-#test-right blockquote {
+.test-right blockquote {
     border-radius: 0px 10px 10px 0px;
     padding: 20px;
     background-color: rgb(255, 207, 170);
@@ -1181,11 +1190,10 @@ footer {
     font-size: 1.3em;
     color: #33363F;
     margin-bottom: 25px;
-    padding-left: 15px;
     border-left: 3px solid rgb(255, 111, 0); 
 }
 
-#test-right span {
+.test-right span {
     display: block;
     font-family: 'Quicksand', sans-serif;
     font-size: 0.75em;
@@ -1196,7 +1204,6 @@ footer {
 .test-main-body {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
 }
 
 .test-main-body p {
@@ -1205,24 +1212,24 @@ footer {
 
 .test-left {
     max-width: 450px;
+    width: 100%;
 }
 
-
-#test-right blockquote {
-  width: 100%;
-  max-width: 450px;
-  box-sizing: border-box;
+.test-right {
+    margin-left: 100px;
 }
 
 @media (max-width: 1050px) {
     .test-main-body {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+    }
+
+    .test-right {
+        margin-top: 30px;
+        margin-left: 0;
     }
 }
-
-
 
 /* ============================================================
     Conclusion
@@ -1238,6 +1245,7 @@ footer {
     margin-bottom: 100px;
     margin-top: 50px;
 }
+
 @media (max-width: 850px) {
     #conclusion {
         max-width: calc(90vw - 50px);
@@ -1255,13 +1263,13 @@ footer {
 
 .conclusion-top {
     display: flex;
-    gap: 50px;
     padding-bottom: 20px;
 }
 
 .conclusion-right {
-    margin-left: auto;
     max-width: 450px;
+    width: 100%;
+    margin-left: 100px;
 }
 
 .conclusion-left h5,
@@ -1279,6 +1287,10 @@ footer {
     margin-top: 10px;
     margin-bottom: 20px;
     line-height: 1.7em;
+}
+
+.conclusion-left p {
+    min-width: 300px;
 }
 
 .conclusion-right p {
