@@ -817,7 +817,6 @@ footer {
 }
 
 #photo-paper-wireframe, #photo-digital-wireframe {
-    margin-top: 40px;
     border-radius: 15px;
     max-width: 720px;
     width: 100%;
@@ -854,6 +853,7 @@ footer {
     #photo-paper-wireframe, #photo-digital-wireframe {
         margin-left: 0;
         padding-left: 0;
+        margin-top: 40px; 
     }
 
     .ideate-middle-pic, .ideate-bottom-pic {
