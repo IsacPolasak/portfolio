@@ -244,7 +244,7 @@ footer {
     padding: 50px clamp(20px, 5vw, 80px) clamp(20px, 5vw, 80px);
     margin: 10px auto;
     max-width: calc(90vw - 120px);
-    margin-top: 50px;
+    margin-top: 40px;
     border: solid var(--background-color) 4px;
     border-radius: 20px;
 }
@@ -325,10 +325,11 @@ footer {
     margin-bottom: 40px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1413px) {
     .overview-top-right-text {
         margin-left: 0;
         padding-top: 0;
+        margin-bottom: 30px;
     }
 }
 
@@ -740,7 +741,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     max-width: 550px;
-    margin-bottom: 50px;
 }
 
 .how-might-we h5 {
@@ -832,7 +832,6 @@ footer {
 }
 
 #photo-paper-wireframe, #photo-digital-wireframe {
-    /* margin-top: 40px; */
     border-radius: 15px;
     max-width: 720px;
     width: 100%;
@@ -845,7 +844,7 @@ footer {
     margin-left: auto;
 }
 
-.ideate-middle, .ideate-bottom {
+ .ideate-bottom {
     margin-top: 60px;
 }
 
@@ -1317,7 +1316,7 @@ footer {
 }
 
 .next-steps-paragraphs {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 
@@ -1384,7 +1383,6 @@ footer {
     text-align: center;
 }
 
-#empathize,
 #define,
 #ideate,
 #prototype,
@@ -1392,6 +1390,11 @@ footer {
 #conclusion {
     padding: 50px clamp(20px, 5vw, 80px);
     margin: 100px auto;
+}
+
+#empathize {
+    padding: 50px clamp(20px, 5vw, 80px);
+    margin: 60px auto 100px auto;
 }
 
 #conclusion {
@@ -1409,7 +1412,6 @@ footer {
     }
 
     .project-overview,
-    #empathize,
     #define,
     #ideate,
     #prototype,
@@ -1427,6 +1429,22 @@ footer {
         box-sizing: border-box;
     }
 
+    #empathize {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 20px !important;
+        padding-left: 12px !important;   /* <-- ADD LEFT PADDING */
+        padding-right: 12px !important;  /* <-- ADD RIGHT PADDING */
+        border-radius: 30px !important;
+        box-sizing: border-box;
+    }
+
+    .project-overview, #empathize {
+        margin-top: 20px !important;
+    }
+
     #quicklinks {
         gap: clamp(4px, 1vw, 16px); 
     }
@@ -1437,6 +1455,10 @@ footer {
     .local-nav img.icon {
         width: clamp(36px, 5.5vw, 90px); 
         height: clamp(36px, 5.5vw, 90px);
+    }
+
+    #empathize {
+        margin-top: 40px !important;
     }
 }
 
