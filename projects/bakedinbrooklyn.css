@@ -490,7 +490,6 @@ footer {
 
 .empathize-main {
     flex: 1;
-    /* min-width: 250px; */
     max-width: 450px;
 }
 
@@ -519,11 +518,10 @@ footer {
 }
 
 .user-quotes blockquote {
-    margin: 30px auto;
     font-family: caveat;
     font-size: 1.5em;
     color: #33363F;
-    margin-top: 50px;
+    padding-bottom: 30px;
 }
 
 .user-quotes blockquote span {
@@ -591,11 +589,16 @@ footer {
     }
 
     .user-quotes blockquote {
-        margin-top: 20px;
+        margin-top: 10px;
+        padding-bottom: 10px;
     }
 
     .empathize-right-side {
         margin-left: 0;
+    }
+
+    .user-quotes {
+        margin-bottom: 30px;
     }
 }
 
@@ -804,7 +807,6 @@ footer {
     background-color: white;
 }
 
-#intro-sentence-ideate,
 #paper-wireframe-title,
 #digital-wireframe-title {
     font-weight: 800;
@@ -813,10 +815,6 @@ footer {
 
 }
 
-.ideate-top {
-    max-width: 450px;
-    line-height: 1.7em;
-}
 
 .ideate-middle, .ideate-bottom {
     display: flex;
@@ -839,7 +837,8 @@ footer {
     margin-left: auto;
 }
 
-.ideate-middle, .ideate-bottom {
+/* .ideate-middle,  */
+.ideate-bottom {
     margin-top: 60px;
 }
 

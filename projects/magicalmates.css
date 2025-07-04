@@ -509,11 +509,10 @@ footer {
 }
 
 .empathize-right-side blockquote {
-    margin: 30px auto;
     font-family: caveat;
     font-size: 1.5em;
     color: #33363F;
-    margin-top: 50px;
+    padding-bottom: 30px;
 }
 
 .empathize-right-side blockquote span {
@@ -609,6 +608,15 @@ footer {
 
     .empathize-main {
         gap: 0px;
+    }
+
+    .empathize-right-side blockquote {
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+    .empathize-right-side {
+        margin-top: 40px;
+        margin-bottom: 30px;
     }
 }
 
@@ -712,9 +720,6 @@ footer {
     margin-bottom: 60px;
 }
 
-.journey-image {
-    margin-bottom: 30px;
-}
 
 @media (max-width: 1050px) {
     .define-top {
@@ -729,7 +734,10 @@ footer {
 
     .journey-image {
         padding-top: 30px;
+        margin-bottom: 30px;
     }
+
+
 }
 
 
