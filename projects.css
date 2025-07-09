@@ -290,12 +290,12 @@ footer {
     max-width: 1000px;
     background-color: var(--bg-beige);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 8px 16px  var(--card-shadow-color);
+    box-shadow: 6px 6px var(--card-shadow-color);
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px var(--card-shadow-color);
+    transform: translateY(4px);
+    box-shadow: none;
     
 }
 

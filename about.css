@@ -256,7 +256,7 @@ footer {
 
 .about-middle-text {
     background-color: var(--bg-beige);
-    border: solid 2px var(--text-color);
+    border: solid 2px transparent;
     padding: 30px 40px;
     border-radius: 5px;
     margin-bottom: 20px;

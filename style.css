@@ -171,7 +171,7 @@ main {
     width: 90%;
     max-width: 610px;
     padding: 30px 40px; 
-    border: solid var(--text-color) 2px;
+    border: solid transparent 2px;
     border-radius: 5px;
     box-sizing: border-box;
     box-shadow: 6px 6px rgba(53, 122, 67, 0.5);
