@@ -3,6 +3,7 @@
     --lighter-bg: #F5F2DC;
     --text-color: #1A1A1A;
     --green-text-color: #728A52;
+    --green-header-hover: #404934;
     --bg-beige: #FEFFD6;
     --bg-green: #D4E2B3;
     --button-hover-color: #B7CE98;
@@ -99,8 +100,8 @@ header {
     color: var(--text-color);
     border-radius: 20px; 
     background-color: var(--button-hover-color);
-    border: solid 2px var(--text-color);
-    border-bottom: solid 5px var(--text-color);
+    border: solid 2px var(--green-header-hover);
+    border-bottom: solid 5px var(--green-header-hover);
 }
 
 .header-nav a:active {
@@ -108,8 +109,8 @@ header {
     color: var(--text-color);
     border-radius: 20px; 
     background-color: var(--green-text-color);
-    border: solid 2px var(--text-color);
-    border-bottom: solid 5px var(--text-color);
+    border: solid 2px var(--green-header-hover);
+    border-bottom: solid 5px var(--green-header-hover);
 }
 
 #header-projects a {

@@ -1,12 +1,7 @@
 :root {
-    --text-color: #000000;
-    --white-color: #FBFBFB;
-    --background-color: #e5e7e8;
-    --lilac-color: #8091D0;
-    --lighter-text: #222635;
-
     --text-color: #1A1A1A;
     --green-text-color: #728A52;
+    --green-header-hover: #404934;
     --bg-beige: #FEFFD6;
     --bg-green: #D4E2B3;
     --button-hover-color: #B7CE98;
@@ -101,8 +96,8 @@ header {
     color: var(--text-color);
     border-radius: 20px; 
     background-color: var(--button-hover-color);
-    border: solid 2px var(--text-color);
-    border-bottom: solid 5px var(--text-color);
+    border: solid 2px var(--green-header-hover);
+    border-bottom: solid 5px var(--green-header-hover);
 }
 
 .header-nav a:active {
@@ -110,8 +105,8 @@ header {
     color: var(--text-color);
     border-radius: 20px; 
     background-color: var(--green-text-color);
-    border: solid 2px var(--text-color);
-    border-bottom: solid 5px var(--text-color);
+    border: solid 2px var(--green-header-hover);
+    border-bottom: solid 5px var(--green-header-hover);
 }
 
 #header-contact a {
@@ -164,7 +159,6 @@ header {
 }
 
 
-
 /* ============================================================
     Main Styles - Homepage
 =============================================================== */
@@ -176,7 +170,7 @@ main {
     flex-direction: column;
     justify-content: center; /* center horizontally */
     align-items: center;     /* center vertically */
-    min-height: calc(100vh - 200px - 70px);
+    min-height: calc(100vh - 150px - 70px);
 }
 
 
