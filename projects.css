@@ -272,7 +272,7 @@ footer {
     width: 100%;
     background-color: var(--green-text-color);
     transition: transform 0.6s ease;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #projects-title:hover::after {
@@ -285,7 +285,7 @@ footer {
 }
 
 .project-card {
-    border-radius: 15px;
+    border-radius: 5px;
     margin-bottom: 40px;
     width: 90%;
     max-width: 1000px;
@@ -305,7 +305,7 @@ footer {
     display: block;
     text-decoration: none;
     color: inherit;
-    border-radius: 15px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -314,7 +314,7 @@ footer {
     display: block;
     text-decoration: none;
     color: inherit;
-    border-radius: 15px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -324,7 +324,7 @@ footer {
     top: 0; left: 0; right: 0; bottom: 0;
     background-color: rgba(0, 0, 0, 0.30); 
     pointer-events: none;
-    border-radius: 15px; 
+    border-radius: 5px; 
 
 }
 
