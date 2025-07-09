@@ -277,7 +277,6 @@ footer {
     background-color: var(--bg-beige);
 }
 
-
 #middle-contact-left {
     font-size: 1.4em;
     font-weight: 700;
@@ -393,6 +392,10 @@ footer {
     animation: none; /* start with no animation */
 }
 
+.tumbleweed-container {
+    background-color: var(--bg-green); 
+}
+
 
 .roll-animation {
     animation: tumbleweed-roll 10s linear forwards; 
@@ -421,8 +424,10 @@ footer {
   #middle-title {
     margin-top: 50px;
   }
+
+  .middle-box-contact {
+    padding: 10px 20px;
+    padding-bottom: 30px;
+    }
 }
 
-.tumbleweed-container {
-    background-color: var(--bg-green); 
-}
