@@ -234,6 +234,7 @@ main {
     padding-left: 20px;
     box-sizing: border-box;
     line-height: 2;
+    margin-left: 20px;
 }
 
 #project-list-title {

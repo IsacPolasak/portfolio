@@ -248,12 +248,25 @@ footer {
 
 .about-middle-paragraphs p{
     line-height: 1.4em;
+}
+
+#about-middle-paragraph-1{
     margin-bottom: 1.2em;
+}
+
+.about-middle-text {
+    background-color: var(--bg-beige);
+    border: solid 2px var(--text-color);
+    padding: 30px 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+        box-shadow: 6px 6px rgba(53, 122, 67, 0.5);
 }
 
 #coworkers {
     color: var(--green-text-color);
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.2em;
 }
 
 /* Image wrapper to hold the image + overlay */
@@ -303,7 +316,7 @@ footer {
     width: 100%;
     padding: 10px 0px;
     overflow: hidden;
-    background: rgb(252, 198, 24);
+    background: var(--green-text-color);
     white-space: nowrap;
     position: relative;
 }
@@ -320,8 +333,9 @@ footer {
     padding-right: 10px;
     font-weight: bold;
     font-size: 1.1em;
-    color: var(--text-color);
+    color: var(--bg-beige);
     white-space: nowrap;
+    font-weight: 500;
 }
 
 /* Pause on hover */
