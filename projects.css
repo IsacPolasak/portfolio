@@ -1,11 +1,13 @@
 :root {
-    --text-color: #000000;
-    --white-color: #FBFBFB;
     --background-color: #e5e7e8;
-    --lilac-color: #8091D0;
-    --lighter-text: #222635;
-    --yellow-color: rgb(255, 183, 0);
-    --blue-color: rgb(4, 109, 238);
+    --lighter-bg: #F5F2DC;
+    --text-color: #1A1A1A;
+    --green-text-color: #728A52;
+    --bg-beige: #FEFFD6;
+    --bg-green: #D4E2B3;
+    --button-hover-color: #B7CE98;
+    --card-shadow-color: rgba(53, 122, 67, 0.5);
+
 }
 
 * {
@@ -22,7 +24,7 @@ a { /*  For links */
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--bg-beige);
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -32,8 +34,8 @@ body {
     Header Styles - Homepage
 =============================================================== */
 
+
 header {
-    background-color: var(--white-color);
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -41,7 +43,6 @@ header {
     align-items: center;
     box-sizing: border-box;
 }
-
 
 .header-right {
     display: flex;
@@ -56,6 +57,12 @@ header {
     display: flex;
     align-items: center;
     padding-left: 30px;
+}
+
+#header-left-side img {
+    height: 75px;
+    width: auto;
+    display: block;
 }
 
 #header-left-side img {
@@ -91,7 +98,7 @@ header {
     width: 15em;
     color: var(--text-color);
     border-radius: 20px; 
-    background-color: var(--background-color);
+    background-color: var(--button-hover-color);
     border: solid 2px var(--text-color);
     border-bottom: solid 5px var(--text-color);
 }
@@ -100,7 +107,7 @@ header {
     width: 15em;
     color: var(--text-color);
     border-radius: 20px; 
-    background-color: #94aaff;
+    background-color: var(--green-text-color);
     border: solid 2px var(--text-color);
     border-bottom: solid 5px var(--text-color);
 }
@@ -108,7 +115,7 @@ header {
 #header-projects a {
     cursor: default;
     pointer-events: none;
-    color: var(--blue-color);
+    color: var(--green-text-color);
 }
 
 #header-left-side:hover {
@@ -131,7 +138,7 @@ header {
         position: absolute;
         top: 80px;
         right: 2rem;
-        background-color: var(--white-color);
+        background-color: var(--bg-beige);
         border: 2px solid var(--text-color);
         border-radius: 20px;
         flex-direction: column;
@@ -140,11 +147,10 @@ header {
         padding: 10px 30px;
         z-index: 1000;
     }
-
     .header-right.active {
         display: flex;
     }
-    
+
     #header-projects {
     display: none;
     }
@@ -153,6 +159,7 @@ header {
         display: block;
     }
 }
+
 
 
 /* ============================================================
@@ -166,6 +173,7 @@ main {
     justify-content: center; /* center horizontally */
     align-items: center;     /* center vertically */
     min-height: calc(100vh - 250px); /* adjust 100px to match header height */
+    background-color: var(--bg-green);
 }
 
 
@@ -173,15 +181,15 @@ main {
     Footer Styles - Homepage
 =============================================================== */
 
-
 footer {
+    background-color: var(--bg-green);
     box-sizing: border-box;
     font-weight: 700;
     width: 100vw;
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
-    margin-top: 90px;
+    padding-top: 90px;
 }
 
 #footer-paragraph {
@@ -200,12 +208,12 @@ footer {
 }
 
 .bottom-email:hover, .resume-button:hover{
-    color: var(--blue-color);
+    color: var(--green-text-color);
 }
 
 .bottom-email:active, .resume-button:active{
     font-size: 0.9em;
-    color: #6573a6;
+    color: var(--green-text-color);
 }
 
 .resume-button {
@@ -213,11 +221,14 @@ footer {
     padding-right: 10px;
 }
 
+.resume-button:active {
+    font-size: 0.8em;
+}
 
 .footer-right {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 /* ============================================================
@@ -231,7 +242,7 @@ footer {
 }
 
 #middle-more {
-    color: rgb(146, 145, 145);
+    color: rgb(70, 95, 75);;
     margin-left: 20px;
     cursor: default;
     pointer-events: none;
@@ -239,15 +250,14 @@ footer {
     font-size: .9em;
 }
 
-
 #projects-title {
     font-size: 2em;
-    font-weight: 600;
+    font-weight: 700;
     position: relative;
     display: inline-block;
     cursor: pointer;
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: 70px;
+    margin-top: 70px;
 }
 
 #projects-title::after {
@@ -259,7 +269,7 @@ footer {
     transform-origin: center;
     height: 4px;
     width: 100%;
-    background-color: rgb(255, 183, 0);
+    background-color: var(--green-text-color);
     transition: transform 0.6s ease;
     border-radius: 10px;
 }
@@ -278,14 +288,15 @@ footer {
     margin-bottom: 40px;
     width: 90%;
     max-width: 1000px;
-    background-color: var(--white-color);
+    background-color: var(--bg-beige);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px  var(--card-shadow-color);
 }
 
 .project-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 12px 24px var(--card-shadow-color);
+    
 }
 
 .project-link {
@@ -339,7 +350,6 @@ footer {
     margin-right: 50px;
     font-size: 1em;
     font-weight: 300;
-    color: var(--lighter-text);
 }
 
 .project-role {

@@ -4,8 +4,13 @@
     --background-color: #e5e7e8;
     --lilac-color: #8091D0;
     --lighter-text: #222635;
-    --yellow-color: rgb(255, 183, 0);
-    --blue-color: rgb(4, 109, 238);
+
+    --text-color: #1A1A1A;
+    --green-text-color: #728A52;
+    --bg-beige: #FEFFD6;
+    --bg-green: #D4E2B3;
+    --button-hover-color: #B7CE98;
+    --light-beige-text: #F5F2DC;
 }
 
 * {
@@ -25,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    background-color: var(--background-color);
+    background-color: var(--bg-beige);
 }
 
 /* ============================================================
@@ -33,7 +38,6 @@ body {
 =============================================================== */
 
 header {
-    background-color: var(--white-color);
     width: 100%;
     padding: 1rem;
     display: flex;
@@ -41,7 +45,6 @@ header {
     align-items: center;
     box-sizing: border-box;
 }
-
 
 .header-right {
     display: flex;
@@ -62,6 +65,12 @@ header {
     height: 75px;
     width: auto;
     display: block;
+}
+
+#header-left-side img {
+    height: 75px;
+    width: auto;
+    display: block;
     transition: 0.2s ease;
     cursor: url('./photos/cursor.png'), pointer;
 }
@@ -75,6 +84,7 @@ header {
     content: unset;
     src: url('./photos/logoactive.png');
 }
+
 
 .header-nav a {
     width: 15em;
@@ -90,7 +100,7 @@ header {
     width: 15em;
     color: var(--text-color);
     border-radius: 20px; 
-    background-color: var(--background-color);
+    background-color: var(--button-hover-color);
     border: solid 2px var(--text-color);
     border-bottom: solid 5px var(--text-color);
 }
@@ -99,7 +109,7 @@ header {
     width: 15em;
     color: var(--text-color);
     border-radius: 20px; 
-    background-color: #94aaff;
+    background-color: var(--green-text-color);
     border: solid 2px var(--text-color);
     border-bottom: solid 5px var(--text-color);
 }
@@ -107,7 +117,7 @@ header {
 #header-contact a {
     cursor: default;
     pointer-events: none;
-    color: var(--blue-color);
+    color: var(--green-text-color);
 }
 
 #header-left-side:hover {
@@ -130,7 +140,7 @@ header {
         position: absolute;
         top: 80px;
         right: 2rem;
-        background-color: var(--white-color);
+        background-color: var(--bg-beige);
         border: 2px solid var(--text-color);
         border-radius: 20px;
         flex-direction: column;
@@ -143,9 +153,9 @@ header {
     .header-right.active {
         display: flex;
     }
-    
+
     #header-contact {
-    display: none;
+        display: none;
     }
 
     .burger {
@@ -154,12 +164,13 @@ header {
 }
 
 
+
 /* ============================================================
     Main Styles - Homepage
 =============================================================== */
 
 main {
-    background-color: var(--background-color);
+    background-color: var(--bg-green);
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
@@ -174,13 +185,14 @@ main {
 =============================================================== */
 
 footer {
+    background-color: var(--bg-green);
     box-sizing: border-box;
     font-weight: 700;
     width: 100vw;
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
-    margin-top: 90px;
+    padding-top: 90px;
 }
 
 #footer-paragraph {
@@ -199,12 +211,12 @@ footer {
 }
 
 .bottom-email:hover, .resume-button:hover{
-    color: var(--blue-color);
+    color: var(--green-text-color);
 }
 
 .bottom-email:active, .resume-button:active{
     font-size: 0.9em;
-    color: #6573a6;
+    color: var(--green-text-color);
 }
 
 .resume-button {
@@ -212,11 +224,14 @@ footer {
     padding-right: 10px;
 }
 
+.resume-button:active {
+    font-size: 0.8em;
+}
 
 .footer-right {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 /* ============================================================
@@ -239,7 +254,7 @@ footer {
     transform-origin: center;
     height: 4px;
     width: 100%;
-    background-color: var(--yellow-color);
+    background-color: var(--green-text-color);
     transition: transform 0.6s ease;
     border-radius: 10px;
 }
@@ -279,11 +294,11 @@ footer {
 }
 
 #email-contact a:hover {
-    color: var(--blue-color)
+    color: var(--green-text-color)
 }
 
 #email-contact a:active {
-    color: #5a689b;
+    color: var(--green-text-color);
 }
 
 #phone-contact, #resume-contact {
@@ -291,7 +306,6 @@ footer {
     display: flex;
     gap: 10px;
 }
-
 
 #phone-contact #number {
     font-weight: 500;
@@ -301,7 +315,7 @@ footer {
 }
 
 #phone-contact #number:hover {
-    color: var(--blue-color);
+    color: var(--green-text-color);
 }
 
 .tooltip {
@@ -313,8 +327,8 @@ footer {
 .tooltip .tooltip-text {
     visibility: hidden;
     width: max-content;
-    background-color: var(--blue-color);
-    color: #fff;
+    background-color: var(--green-text-color);
+    color: var(--light-beige-text);
     text-align: center;
     border-radius: 10px;
     padding: 3px 15px;
@@ -389,15 +403,6 @@ footer {
   }
 }
 
-.bottom-email:hover{
-    color: var(--blue-color);
-}
-
-.bottom-email:active{
-    font-size: 0.9em;
-    color: #6573a6;
-}
-
 
 @media (max-width: 768px) {
   .middle-box-contact {
@@ -410,4 +415,8 @@ footer {
   #middle-title {
     margin-top: 50px;
   }
+}
+
+.tumbleweed-container {
+    background-color: var(--bg-green); 
 }
