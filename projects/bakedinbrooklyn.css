@@ -1364,7 +1364,7 @@ footer {
 
 #back-to-quicklinks {
     background-color: var(--green-text-color);
-    color: white;
+    color: var(--bg-beige);
     padding: 10px 100px;
     font-size: 1.5em;
     font-weight: bold;
@@ -1375,11 +1375,11 @@ footer {
 }
 
 #back-to-quicklinks:hover {
-    background-color: var(--background-color);
+    background-color: var(--bg-green);
 }
 
 #back-to-quicklinks:active {
-    background-color: gray;
+    background-color: var(--button-hover-color);
 }
 
 
