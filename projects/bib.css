@@ -1165,7 +1165,6 @@ Section 7: Conclusion
     gap: 20px;
     padding: 25px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    /* background-color: white; */
     border-radius: 0px 20px 20px 0px;
     border-left: 4px solid var(--gray-color);
     transition: all 0.3s ease;
@@ -1256,7 +1255,7 @@ Section 7: Conclusion
 
 #back-to-top:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 5px  rgb(0, 0, 0, 0.5);
+    box-shadow: 0 5px 0 rgb(0, 0, 0, 0.8);
     background-color: var(--gray-hover);
 }
 
@@ -1368,5 +1367,11 @@ Section 7: Conclusion
         font-size: 1rem;
         font-weight: 400;
         margin-bottom: 8px;
+    }
+
+
+    #back-to-top {
+        max-width: 80vw;
+        text-align: center;
     }
 }
