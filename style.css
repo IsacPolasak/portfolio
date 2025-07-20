@@ -120,6 +120,7 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
 footer h3 {
     font-family: "Manrope";
     font-size: 1.75rem;
@@ -403,8 +404,6 @@ Section 3
 }
 
 
-
-
 /* ========================
 Typewriter Effect
 ======================== */
@@ -440,3 +439,50 @@ Typewriter Effect
   }
 }
 
+
+@media (max-width: 430px) {
+    #upper-header {
+        padding: 20px;
+    }
+
+    #upper-header a {
+        font-size: 1.2rem;
+    }
+
+    #header-right-side {
+        gap: 20px;
+    }
+
+    #lower-header {
+        margin-right: 20px;
+        margin-top: -20px;
+    }
+
+    .project-card-top {
+        width: 250px;
+    }
+
+    footer {
+        height: 250px;
+    }
+
+    footer img {
+        margin-left: 20px;
+        margin-top: -20px;
+    }
+
+    footer h3 {
+        font-family: "Manrope";
+        font-size: 1.5rem;
+        font-weight: 700;
+        white-space: nowrap;
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    footer a {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+}

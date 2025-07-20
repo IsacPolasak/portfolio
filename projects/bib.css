@@ -1324,3 +1324,27 @@ Section 7: Conclusion
         display: none;
     }
 }
+
+
+
+
+
+
+@media (max-width: 430px) {
+    #upper-header {
+        padding: 20px;
+    }
+
+    #upper-header a {
+        font-size: 1.2rem;
+    }
+
+    #header-right-side {
+        gap: 20px;
+    }
+
+    #lower-header {
+        margin-right: 20px;
+        margin-top: -20px;
+    }
+}
