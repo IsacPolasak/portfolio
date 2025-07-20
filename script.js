@@ -1,108 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const logo = document.getElementById("header-image");
-  
-  if (logo) {
-    const isProjectPage = window.location.pathname.includes("/projects/");
-    const basePath = isProjectPage ? "../photos/" : "./photos/";
-
-    logo.addEventListener("mouseover", () => {
-      logo.src = `${basePath}logohover.png`;
-    });
-
-    logo.addEventListener("mousedown", () => {
-      logo.src = `${basePath}logoactive.png`;
-    });
-
-    logo.addEventListener("mouseup", () => {
-      logo.src = `${basePath}logohover.png`;
-    });
-
-    logo.addEventListener("mouseleave", () => {
-      logo.src = `${basePath}headerlogo.png`;
-    });
-  }
-});
-
-
-// Burger menu opens menu when clicked.
-document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.getElementById("burger");
-    const nav = document.querySelector(".header-right");
-    burger.addEventListener("click", function () {
-        nav.classList.toggle("active");
-    });
-});
-
-// Allows the marquee to be paused when clicking.
-document.addEventListener('DOMContentLoaded', () => {
-  const marquee = document.querySelector('.marquee-content');
-
-  marquee.addEventListener('click', () => {
-    const isPaused = marquee.style.animationPlayState === 'paused';
-    marquee.style.animationPlayState = isPaused ? 'running' : 'paused';
-  });
-});
-// Copies phone number to clipboard
-document.addEventListener("DOMContentLoaded", function () {
-  const phoneNumber = document.getElementById("number");
-
-  if (phoneNumber) {
-    phoneNumber.addEventListener("click", () => {
-      navigator.clipboard.writeText(phoneNumber.textContent.trim());
-
-      const tooltip = phoneNumber.nextElementSibling;
-      if (tooltip && tooltip.classList.contains("tooltip-text")) {
-        tooltip.textContent = "Copied!";
+// Function to toggle GIF play/pause
+function toggleGif(gifElement) {
+    const originalSrc = gifElement.getAttribute('data-original-src') || gifElement.src;
+    
+    // Store original src if not already stored
+    if (!gifElement.getAttribute('data-original-src')) {
+        gifElement.setAttribute('data-original-src', originalSrc);
+    }
+    
+    if (gifElement.getAttribute('data-paused') === 'true') {
+        // Resume: restore original src
+        gifElement.src = originalSrc;
+        gifElement.setAttribute('data-paused', 'false');
+        gifElement.style.opacity = '1';
+        gifElement.title = 'Click to pause';
+    } else {
+        // Pause: force reload to capture current frame, then stop
+        gifElement.src = originalSrc + '?' + Date.now(); // Force reload
         setTimeout(() => {
-          tooltip.textContent = "Copy to clipboard";
-        }, 1500);
-      }
+            // After a brief moment, replace with a static version
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = gifElement.naturalWidth || 300;
+            canvas.height = gifElement.naturalHeight || 200;
+            
+            // Draw current frame
+            ctx.drawImage(gifElement, 0, 0);
+            
+            // Replace src with canvas data
+            gifElement.src = canvas.toDataURL();
+            gifElement.setAttribute('data-paused', 'true');
+            gifElement.style.opacity = '0.8';
+            gifElement.title = 'Click to play';
+        }, 100);
+    }
+}
+
+// Initialize GIF controls when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const gifs = document.querySelectorAll('.prototype-gif, .phone-screen img[src*=".gif"]');
+    
+    gifs.forEach(function(gif) {
+        gif.style.cursor = 'pointer';
+        gif.title = 'Click to pause';
+        
+        // Add click event if not already present
+        if (!gif.hasAttribute('onclick')) {
+            gif.addEventListener('click', function() {
+                toggleGif(this);
+            });
+        }
     });
-  }
 });
-
-// Makes tumbleweed go across screen every 20 seconds.
-document.addEventListener('DOMContentLoaded', () => {
-  const tumbleweed = document.querySelector('.tumbleweed');
-  if (!tumbleweed) return;
-
-  function rollOnce() {
-    // Remove the class
-    tumbleweed.classList.remove('roll-animation');
-
-    // Reset position and rotation immediately
-    tumbleweed.style.left = '-150px';
-    tumbleweed.style.transform = 'rotate(0deg)';
-
-    // Force reflow — this makes the browser "forget" the previous animation state
-    void tumbleweed.offsetWidth;
-
-    // Add the animation class back to trigger the animation
-    tumbleweed.classList.add('roll-animation');
-  }
-
-  setInterval(rollOnce, 30000);
-});
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const headerImg = document.getElementById("header-image");
-//   const logoLink = document.getElementById("logo-link");
-
-//   logoLink.addEventListener("mouseover", function () {
-//     headerImg.src = "../photos/logohover.png";
-//   });
-
-//   logoLink.addEventListener("mouseout", function () {
-//     headerImg.src = "../photos/headerlogo.png";
-//   });
-
-//   logoLink.addEventListener("mousedown", function () {
-//     headerImg.src = "../photos/logoactive.png";
-//   });
-
-//   logoLink.addEventListener("mouseup", function () {
-//     headerImg.src = "../photos/logohover.png";
-//   });
-// });
