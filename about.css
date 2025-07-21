@@ -128,7 +128,6 @@ footer a {
 }
 
 footer a:hover {
-    /* color: var(--blue-hover); */
     text-decoration: underline;
     text-underline-offset: 6px;
 }
@@ -325,7 +324,6 @@ Mobile Responsive
         margin-top: 0px;
     }
 }
-
 
 
 

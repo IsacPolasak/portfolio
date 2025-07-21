@@ -339,7 +339,7 @@ blockquote {
     margin: 1em 0;
     padding: 1em 1.5em;
     font-style: italic;
-    font-family: 'Patrick Hand', cursive;  /* Optional */
+    font-family: 'Patrick Hand', cursive; 
     font-size: 1.2rem;
 }
 
@@ -1267,9 +1267,9 @@ Section 7: Conclusion
 
 
 #section-tracker {
-    position: absolute; /* start absolutely aligned */
+    position: absolute;
     top: auto;
-    left: calc(50% - 410px - 150px); /* center - half of 820px - some offset to the left */
+    left: calc(50% - 410px - 150px); 
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -1277,7 +1277,7 @@ Section 7: Conclusion
 #section-tracker.sticky {
     position: fixed;
     top: 80px;
-    left: 30px; /* where you had it originally */
+    left: 30px; 
 }
 
 

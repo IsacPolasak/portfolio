@@ -46,12 +46,8 @@ Header
 }
 
 #upper-header a:hover {
-    /* color: var(--blue-hover); */
     text-decoration: underline;
     text-underline-offset: 6px;
-    /* text-decoration: line-through; */
-      /* background: linear-gradient(to top, rgb(138, 187, 255) 0%, transparent 25%); */
-
 }
 
 #upper-header a:active {
