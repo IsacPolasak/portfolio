@@ -71,17 +71,17 @@ Header
     display: block;
     width: 60px;  /* Set to your logo width */
     height: 60px; /* Set to your logo height */
-    background-image: url('../photos/logo.png');
+    background-image: url('./../../photos/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #logo-link:hover {
-    background-image: url('../photos/logo-hover.png');
+    background-image: url('./../../photos/logo-hover.png');
 }
 
 #logo-link:active {
-    background-image: url('../photos/logo-active.png');
+    background-image: url('./../../photos/logo-active.png');
 }
 
 
@@ -110,7 +110,7 @@ Footer
 ==================================================================================== */
 
 footer {
-    background-image: url('../photos/section3bg.png');
+    background-image: url('./../../photos/section3bg.png');
     background-size: cover;    
     background-repeat: no-repeat;
     background-position: center;

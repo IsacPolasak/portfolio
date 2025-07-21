@@ -267,7 +267,7 @@ Section 1
     background-color: var(--gray-active);
 }
 
-.typed-text {
+.typed-text, .typed-text-es {
     letter-spacing: 0.1rem;
 }
 
@@ -275,8 +275,6 @@ Section 1
 /* ====================================================================================
 Section 2
 ==================================================================================== */
-
-
 
 #section-two{
     scroll-margin: -20px;;
@@ -420,6 +418,21 @@ Typewriter Effect
     letter-spacing: 0.05em;
     animation: typing 1s steps(12, end), blink-caret 0.5s step-end 0s 3.0 forwards;
     width: fit-content;
+}
+
+.typewriter-es {
+    overflow: hidden; 
+    border-right: 0.1em solid var(--gray-color); 
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    animation: typing-es 1s steps(16, end), blink-caret 0.5s step-end 0s 3.0 forwards;
+    width: fit-content;
+}
+
+@keyframes typing-es {
+    from { width: 0ch; }
+    to { width: 12ch; }  
 }
 
 @keyframes typing {
