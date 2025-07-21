@@ -97,6 +97,14 @@ Header
     height: 15px;
 }
 
+#english:hover, #spanish:hover {
+    opacity: 50%;
+}
+
+#english:active, #spanish:active {
+    opacity: 90%;
+}
+
 /* ====================================================================================
 Footer
 ==================================================================================== */
@@ -253,6 +261,11 @@ Section 1: Overview
     width: 100%;
     max-width: 100%;
     object-fit: contain;
+}
+
+#footer-right-side {
+    position: relative;
+    height: 250px; 
 }
 
 @media (max-width: 768px) {

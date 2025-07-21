@@ -97,6 +97,15 @@ Header
     height: 15px;
 }
 
+#english:hover, #spanish:hover {
+    opacity: 50%;
+}
+
+
+#english:active, #spanish:active {
+    opacity: 90%;
+}
+
 /* ====================================================================================
 Footer
 ==================================================================================== */
@@ -115,6 +124,7 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
 footer h3 {
     font-family: "Manrope";
     font-size: 1.75rem;
@@ -161,12 +171,18 @@ footer img {
     display: block;
 }
 
+#footer-right-side {
+    position: relative;
+    height: 250px; 
+}
+
 @media (max-width: 749px) {
     footer {
         padding: 50px 30px 50px 30px;
         height: 320px;
     }
 }
+
 
 
 /* ====================================================================================
