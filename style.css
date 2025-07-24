@@ -74,6 +74,7 @@ Header
     background-image: url('./photos/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 5px;
 }
 
 #logo-link:hover {
@@ -190,7 +191,7 @@ Section 1
     max-width: 350px;
     align-items: center;
     margin: 100px auto ; 
-
+    margin-top: 50px;
 }
 
 #section-one h2 {
@@ -337,6 +338,7 @@ Section 2
 
 .project-card-top:hover {
     border-color: var(--gray-color);
+    transition: 0.2s ease-in-out;
 }
 
 .project-card-text h4 {

@@ -68,11 +68,12 @@ Header
 
 #logo-link {
     display: block;
-    width: 60px;  /* Set to your logo width */
-    height: 60px; /* Set to your logo height */
+    width: 60px;
+    height: 60px;
     background-image: url('./photos/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 5px;
 }
 
 #logo-link:hover {

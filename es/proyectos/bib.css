@@ -74,6 +74,7 @@ Header
     background-image: url('./../../photos/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 5px;
 }
 
 #logo-link:hover {
